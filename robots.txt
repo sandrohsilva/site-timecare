@@ -1,0 +1,8 @@
+# robots.txt for TimeCare & TimeCare Lite
+# Permite a indexação de todos os mecanismos de busca (Googlebot, Bingbot, etc.)
+
+User-agent: *
+Allow: /
+
+# Sitemap oficial
+Sitemap: sitemap.xml

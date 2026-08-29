@@ -1,6 +1,6 @@
 /**
  * TimeCare & TimeCare Lite - Main JavaScript Controller
- * Light Theme Edition with Scroll Reveal Animations, Lightbox, Obfuscated Contacts & FAQ Accordion
+ * Light Theme Edition with Lead Capture Modal (FormSubmit), Scroll Reveal, Lightbox & Obfuscated Contacts
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSmoothScroll();
   initScrollReveal();
+  initLeadModalForm();
 });
 
 /* ==========================================================================
@@ -17,11 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
    ========================================================================== */
 function initObfuscatedContacts() {
   // Encoded payloads to prevent plain-text email/phone scraping by web crawlers
-  // Email: atendimento.iatech@gmail.com
   const _ePayload = 'YXRlbmRpbWVudG8uaWF0ZWNoQGdtYWlsLmNvbQ==';
-  // Phone display: (31) 98795-5690
   const _pDisplay = 'KDMxKSA5ODc5NS01Njkw';
-  // Phone raw digits: 5531987955690
   const _pRaw = 'NTUzMTk4Nzk1NTY5MA==';
 
   const emailBtn = document.getElementById('btn-reveal-email');
@@ -40,7 +38,6 @@ function initObfuscatedContacts() {
       emailDisplay.classList.add('revealed');
       if (emailCopyBtn) emailCopyBtn.style.display = 'inline-flex';
       
-      // Open mailto on direct user click
       window.location.href = 'mailto:' + decodedEmail + '?subject=' + encodeURIComponent('Contato via Site TimeCare');
       showToast('E-mail pronto para envio!');
     });
@@ -64,7 +61,6 @@ function initObfuscatedContacts() {
       waDisplay.classList.add('revealed');
       if (waCopyBtn) waCopyBtn.style.display = 'inline-flex';
 
-      // Open WhatsApp Web/App
       const defaultMsg = encodeURIComponent('Olá! Visitei o site do TimeCare e gostaria de tirar algumas dúvidas.');
       window.open(`https://wa.me/${rawDigits}?text=${defaultMsg}`, '_blank', 'noopener,noreferrer');
       showToast('Redirecionando para o WhatsApp...');
@@ -92,7 +88,6 @@ function initGalleryFilterAndLightbox() {
   const modalCaption = document.getElementById('lightbox-caption');
   const modalClose = document.getElementById('lightbox-close');
 
-  // Filtering
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
@@ -112,7 +107,6 @@ function initGalleryFilterAndLightbox() {
     });
   });
 
-  // Lightbox open
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
       const fullSrc = item.getAttribute('data-fullsrc') || item.querySelector('img').src;
@@ -129,7 +123,6 @@ function initGalleryFilterAndLightbox() {
     });
   });
 
-  // Lightbox close
   function closeModal() {
     if (modal) {
       modal.classList.remove('active');
@@ -157,7 +150,112 @@ function initGalleryFilterAndLightbox() {
 }
 
 /* ==========================================================================
-   3. FAQ Accordion
+   3. Lead Capture Modal & FormSubmit AJAX Handler
+   ========================================================================== */
+function initLeadModalForm() {
+  const leadModal = document.getElementById('lead-modal');
+  const modalCloseBtn = document.getElementById('lead-modal-close');
+  const openModalBtns = document.querySelectorAll('.btn-open-lead-modal');
+  const form = document.getElementById('lead-capture-form');
+  const formSuccessMsg = document.getElementById('form-success-message');
+  const closeSuccessBtn = document.getElementById('btn-close-success');
+  const submitBtn = document.getElementById('lead-submit-btn');
+
+  function openModal() {
+    if (leadModal) {
+      leadModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeModal() {
+    if (leadModal) {
+      leadModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  openModalBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+  if (closeSuccessBtn) {
+    closeSuccessBtn.addEventListener('click', () => {
+      closeModal();
+      // Reset form state after closing
+      setTimeout(() => {
+        if (form) form.style.display = 'block';
+        if (formSuccessMsg) formSuccessMsg.style.display = 'none';
+      }, 300);
+    });
+  }
+
+  if (leadModal) {
+    leadModal.addEventListener('click', (e) => {
+      if (e.target === leadModal) {
+        closeModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && leadModal && leadModal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // FormSubmit AJAX handling
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <span>Enviando solicitação...</span>
+          <svg class="spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+        `;
+      }
+
+      const formData = new FormData(form);
+
+      fetch('https://formsubmit.co/ajax/atendimento.iatech@gmail.com', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `
+            <span>Enviar Solicitação</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          `;
+        }
+
+        form.reset();
+        form.style.display = 'none';
+        if (formSuccessMsg) formSuccessMsg.style.display = 'block';
+        showToast('Solicitação enviada com sucesso!');
+      })
+      .catch(err => {
+        console.error('Erro na requisição AJAX do FormSubmit:', err);
+        // Fallback to standard submit
+        form.submit();
+      });
+    });
+  }
+}
+
+/* ==========================================================================
+   4. FAQ Accordion
    ========================================================================== */
 function initFaqAccordion() {
   const faqQuestions = document.querySelectorAll('.faq-question');
@@ -167,7 +265,6 @@ function initFaqAccordion() {
       const item = question.parentElement;
       const isActive = item.classList.contains('active');
 
-      // Close all other items
       document.querySelectorAll('.faq-item').forEach(otherItem => {
         if (otherItem !== item) {
           otherItem.classList.remove('active');
@@ -176,7 +273,6 @@ function initFaqAccordion() {
         }
       });
 
-      // Toggle current
       if (isActive) {
         item.classList.remove('active');
         question.setAttribute('aria-expanded', 'false');
@@ -189,7 +285,7 @@ function initFaqAccordion() {
 }
 
 /* ==========================================================================
-   4. Mobile Menu
+   5. Mobile Menu
    ========================================================================== */
 function initMobileMenu() {
   const toggleBtn = document.querySelector('.mobile-menu-toggle');
@@ -203,7 +299,6 @@ function initMobileMenu() {
       toggleBtn.setAttribute('aria-expanded', expanded);
     });
 
-    // Close when clicking any nav link
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
@@ -214,7 +309,7 @@ function initMobileMenu() {
 }
 
 /* ==========================================================================
-   5. Smooth Scroll & Navbar Dynamic Shadow
+   6. Smooth Scroll & Navbar Dynamic Shadow
    ========================================================================== */
 function initSmoothScroll() {
   const navbar = document.querySelector('.navbar');
@@ -233,7 +328,7 @@ function initSmoothScroll() {
 }
 
 /* ==========================================================================
-   6. Scroll Reveal Animations (Intersection Observer)
+   7. Scroll Reveal Animations (Intersection Observer)
    ========================================================================== */
 function initScrollReveal() {
   const revealElements = document.querySelectorAll('.scroll-reveal');
@@ -253,13 +348,12 @@ function initScrollReveal() {
 
     revealElements.forEach(el => observer.observe(el));
   } else {
-    // Fallback for older browsers
     revealElements.forEach(el => el.classList.add('visible'));
   }
 }
 
 /* ==========================================================================
-   7. Toast Utility
+   8. Toast Utility
    ========================================================================== */
 let toastTimeout;
 function showToast(message) {

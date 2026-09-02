@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Sitemap oficial
-Sitemap: sitemap.xml
+Sitemap: https://timecare.com.br/sitemap.xml

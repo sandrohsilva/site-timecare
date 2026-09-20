@@ -114,7 +114,16 @@
   </script>
 </head>
 
-<body>
+<body class="has-campaign-bar">
+
+  <!-- Campaign Top Announcement Bar -->
+  <aside class="campaign-bar" aria-label="Campanha Salões de Beleza">
+    <div class="campaign-bar-text">
+      <span class="campaign-bar-badge">Campanha Ativa</span>
+      <span>Você veio pelo anúncio para <strong>Salões de Beleza & Estética</strong>?</span>
+      <a href="salao.html" class="campaign-bar-link track-salao-click">Clique aqui para ver a página de Salões &rarr;</a>
+    </div>
+  </aside>
 
   <!-- Ambient Glow Effects -->
   <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
@@ -124,16 +133,15 @@
   <!-- Header & Navbar -->
   <header class="navbar" id="navbar">
     <div class="container navbar-container">
-      <a href="#inicio" class="navbar-brand" title="TimeCare - Página Inicial">
+      <a href="index.html" class="navbar-brand" title="TimeCare - Página Inicial">
         <img src="logo/logo.webp" alt="Logotipo TimeCare" class="navbar-logo" width="44" height="44">
         <span>TimeCare</span>
       </a>
 
       <nav aria-label="Navegação Principal">
         <ul class="navbar-nav">
-          <li><a href="#inicio" class="nav-link">Início</a></li>
-          <li><a href="#timecare-pro" class="nav-link">TimeCare Pro</a></li>
-          <li><a href="#timecare-lite" class="nav-link">TimeCare Lite</a></li>
+          <li><a href="salao.html" class="nav-link track-salao-click" style="color: #059669; font-weight: 700;">Salões & Estética</a></li>
+          <li><a href="clinica.html" class="nav-link track-clinica-click" style="color: #2563eb; font-weight: 700;">Clínicas (SaaS)</a></li>
           <li><a href="#comparativo" class="nav-link">Comparativo</a></li>
           <li><a href="#galeria" class="nav-link">Telas</a></li>
           <li><a href="#seguranca" class="nav-link">Segurança & Privacidade</a></li>
@@ -161,130 +169,146 @@
     <section class="hero-section">
       <div class="container">
         <div class="hero-content scroll-reveal">
-          <div class="badge badge-glow">Tecnologia Especializada em Saúde & Bem-estar</div>
+          <div class="badge badge-glow">Plataforma Inteligente de Gestão & Agendamento</div>
           <h1 class="hero-title">
-            A tecnologia certa para a sua escala: <span>Da clínica à prática autônoma</span>
+            A tecnologia certa para a sua escala: <span>Do salão e consultório à clínica</span>
           </h1>
           <p class="hero-description">
-            Marketing transparente e engenharia sólida. Conheça as duas edições do <strong>TimeCare</strong> desenhadas
-            especificamente para atender as reais necessidades do seu modelo de negócio.
+            Marketing transparente e engenharia sólida. Conheça as soluções da plataforma <strong>TimeCare</strong> desenhadas
+            especificamente para atender as reais necessidades do seu modelo de atendimento.
           </p>
 
-          <div class="hero-cta-group">
-            <button type="button" class="btn btn-pro btn-lg btn-open-lead-modal">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-              </svg>
-              Conheça o TimeCare Pro
-            </button>
-            <a href="https://play.google.com/store/apps/details?id=br.com.iatech.timecare_lite&pcampaignid=web_share"
-              target="_blank" rel="noopener noreferrer" class="btn btn-lite btn-lg">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M3.609 1.814L13.792 12 3.61 22.186a1.986 1.986 0 0 1-.61-1.414V3.228c0-.53.21-1.04.609-1.414zM15.206 13.414l2.42 2.42-12.822 7.4c.594.34 1.34.27 1.866-.17l8.536-9.65zm0-2.828l-8.536-9.65A1.99 1.99 0 0 0 4.804.766l12.822 7.4-2.42 2.42zm2.122 1.414l3.52-2.03a1.997 1.997 0 0 0 0-3.46l-3.52-2.03-2.12 2.12 2.12 5.4z" />
-              </svg>
-              Baixar TimeCare Lite Grátis
-            </a>
+          <!-- High-Conversion Segment Selector -->
+          <div class="segment-selector-wrapper scroll-reveal">
+            <div class="segment-selector-header">
+              <span class="badge badge-glow" style="margin-bottom: 0.5rem;">Guia Rápido por Segmento</span>
+              <h3>Qual é o seu tipo de negócio?</h3>
+              <p>Selecione a sua área para acessar os recursos feitos sob medida para a sua rotina:</p>
+            </div>
+
+            <div class="segment-cards-grid">
+              <!-- Card A: Salão de Beleza & Estética (Active Campaign Highlighting) -->
+              <div class="segment-card segment-card-salao">
+                <div>
+                  <div class="segment-card-badge-wrap">
+                    <span class="segment-badge-campaign">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                      </svg>
+                      Campanha Ativa &bull; App Grátis
+                    </span>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #059669;">TimeCare Lite</span>
+                  </div>
+
+                  <div class="segment-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="6" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                      <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                      <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                    </svg>
+                  </div>
+
+                  <h4>Salão de Beleza, Barbearia ou Estética</h4>
+                  <div class="segment-card-target">Para cabeleireiros, manicures, barbeiros e autônomos de estética</div>
+
+                  <ul class="segment-card-features">
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Agenda visual no celular sem furos:</strong> marque e consulte horários em segundos.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Caixa diário na ponta do lápis:</strong> controle entradas (Pix, dinheiro, cartão) e despesas.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Lembretes no WhatsApp com 1 toque:</strong> reduza faltas e atrasos de clientes.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>100% gratuito e funciona offline:</strong> sem mensalidade e sem precisar de internet contínua.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="segment-card-action">
+                  <a href="salao.html" class="btn btn-segment-salao track-salao-click">
+                    Ver Página de Salões & Baixar Grátis &rarr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card B: Clínicas & Prática Médica -->
+              <div class="segment-card segment-card-clinica">
+                <div>
+                  <div class="segment-card-badge-wrap">
+                    <span class="badge badge-pro" style="margin-bottom: 0;">SaaS Corporativo</span>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #2563eb;">TimeCare Pro</span>
+                  </div>
+
+                  <div class="segment-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                  </div>
+
+                  <h4>Clínicas Médicas & Consultórios de Saúde</h4>
+                  <div class="segment-card-target">Para clínicas odontológicas, centros médicos e equipes de saúde</div>
+
+                  <ul class="segment-card-features">
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Gestão Multiprofissional:</strong> agendas unificadas, secretárias e controle de acesso (RBAC).</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Prontuário & CRM LGPD:</strong> histórico seguro e evolução clínica em conformidade médica.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Estoque Integrado:</strong> baixa automática de materiais por atendimento realizado.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Fluxo de Caixa & DRE:</strong> conciliação e relatórios financeiros em tempo real.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="segment-card-action">
+                  <a href="clinica.html" class="btn btn-segment-clinica track-clinica-click">
+                    Conhecer Soluções para Clínicas &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Dual Product Cards Selector -->
-          <div class="hero-products-grid scroll-reveal">
-            <!-- Card TimeCare Pro -->
-            <article class="product-hero-card card-pro">
-              <div class="hero-card-header">
-                <span class="badge badge-pro">Clínicas & PMEs</span>
-                <h2 class="hero-card-title">TimeCare Pro</h2>
-                <div class="hero-card-target">Para Clínicas Médicas, Odontológicas, Estética e Spas</div>
-              </div>
-              <ul class="hero-card-list">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Gestão Multiprofissional:</strong> Agendas unificadas, secretárias e controle de acesso
-                    por função (RBAC).</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Prontuário & CRM:</strong> Histórico clínico, evolução de tratamentos e fidelização de
-                    pacientes.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Estoque Integrado:</strong> Baixa automática de insumos e materiais vinculados a cada
-                    procedimento.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Inteligência Artificial:</strong> Insights de ociosidade de agenda e apoio
-                    operacional.</span>
-                </li>
-              </ul>
-              <div class="card-action-wrap">
-                <button type="button" class="btn btn-pro btn-sm btn-open-lead-modal">Inicie Agora &rarr;</button>
-              </div>
-            </article>
-
-            <!-- Card TimeCare Lite -->
-            <article class="product-hero-card card-lite">
-              <div class="hero-card-header">
-                <span class="badge badge-lite">Autônomos & Consultórios</span>
-                <h2 class="hero-card-title">TimeCare Lite</h2>
-                <div class="hero-card-target">Para Médicos, Dentistas e Terapeutas com Consultório Próprio</div>
-              </div>
-              <ul class="hero-card-list">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Arquitetura Local-First:</strong> Banco de dados SQLite no dispositivo. Privacidade
-                    total de dados financeiros.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Nuvem Transiente:</strong> Sincronização transitória de agendamentos sem custos pesados
-                    de infraestrutura.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Triagem em Quarentena:</strong> Solicitações externas não bagunçam sua grade; bloqueio
-                    direto de spammers.</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>WhatsApp Integrado & Alertas:</strong> Comunicação direta e lembretes 100% offline no
-                    celular.</span>
-                </li>
-              </ul>
-              <div class="card-action-wrap">
-                <a href="https://play.google.com/store/apps/details?id=br.com.iatech.timecare_lite&pcampaignid=web_share"
-                  target="_blank" rel="noopener noreferrer" class="btn btn-lite btn-sm">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M3.609 1.814L13.792 12 3.61 22.186a1.986 1.986 0 0 1-.61-1.414V3.228c0-.53.21-1.04.609-1.414zM15.206 13.414l2.42 2.42-12.822 7.4c.594.34 1.34.27 1.866-.17l8.536-9.65zm0-2.828l-8.536-9.65A1.99 1.99 0 0 0 4.804.766l12.822 7.4-2.42 2.42zm2.122 1.414l3.52-2.03a1.997 1.997 0 0 0 0-3.46l-3.52-2.03-2.12 2.12 2.12 5.4z" />
-                  </svg>
-                  Instale É Grátis &rarr;
-                </a>
-              </div>
-            </article>
-          </div>
+          <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--text-muted);">
+            Ou role para baixo para comparar as edições Pro e Lite em detalhes &darr;
+          </p>
         </div>
       </div>
     </section>
+
 
     <!-- Deep Dive: TimeCare Pro Section -->
     <section class="section product-showcase" id="timecare-pro">

@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initScrollReveal();
   initLeadModalForm();
+  initTrackingAndStickyCta();
 });
 
 /* ==========================================================================
@@ -379,4 +380,77 @@ function showToast(message) {
   toastTimeout = setTimeout(() => {
     toast.style.display = 'none';
   }, 4000);
+}
+
+/* ==========================================================================
+   9. GA4 Event Tracking & Sticky Mobile CTA Controller
+   ========================================================================== */
+function initTrackingAndStickyCta() {
+  // GA4 Event Trigger Helper
+  function trackGaEvent(eventName, params = {}) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, params);
+    }
+  }
+
+  // Track Segment Clicks
+  const salaoTriggers = document.querySelectorAll('.track-salao-click');
+  salaoTriggers.forEach(el => {
+    el.addEventListener('click', () => {
+      trackGaEvent('select_content', {
+        content_type: 'segment_selection',
+        item_id: 'segment_salao_beleza'
+      });
+      trackGaEvent('segment_selected_salao', {
+        origin_page: window.location.pathname
+      });
+    });
+  });
+
+  const clinicaTriggers = document.querySelectorAll('.track-clinica-click');
+  clinicaTriggers.forEach(el => {
+    el.addEventListener('click', () => {
+      trackGaEvent('select_content', {
+        content_type: 'segment_selection',
+        item_id: 'segment_clinica_saude'
+      });
+      trackGaEvent('segment_selected_clinica', {
+        origin_page: window.location.pathname
+      });
+    });
+  });
+
+  // Track Play Store Download Clicks
+  const playstoreTriggers = document.querySelectorAll('.track-playstore-download, a[href*="play.google.com"]');
+  playstoreTriggers.forEach(el => {
+    el.addEventListener('click', () => {
+      const source = el.getAttribute('data-download-source') || 'direct_link';
+      trackGaEvent('conversion', {
+        send_to: 'GT-W6NLGSJX',
+        event_category: 'download',
+        event_label: 'google_play_timecare_lite',
+        source: source
+      });
+      trackGaEvent('playstore_download_click', {
+        page: window.location.pathname,
+        source: source
+      });
+    });
+  });
+
+  // Sticky Mobile CTA Visibility
+  const stickyCta = document.getElementById('sticky-mobile-cta');
+  if (stickyCta) {
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      // Show sticky CTA once scrolled past 280px
+      if (currentScrollY > 280) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+  }
 }

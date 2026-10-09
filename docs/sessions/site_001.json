@@ -1,0 +1,86 @@
+{
+  "sessao": {
+    "numero": 1,
+    "data": "2026-10-08",
+    "modulo_principal": "site_timecare_lite",
+    "objetivo": "Criação da página dedicada e reestilizada do TimeCare Lite (lite.html), correção de links de imagens quebradas na página principal e página de salão, incorporação do vídeo em mockup e de todas as novas telas reais.",
+    "status": "concluida"
+  },
+  "delta": {
+    "arquivos_modificados": [
+      {
+        "caminho": "lite.html",
+        "natureza": "criacao",
+        "descricao": "Página dedicada de alta conversão para o TimeCare Lite com vídeo de uso real em mockup de celular, destaques dos 6 diferenciais, 11 nichos de mercado, PDV com controle de estoque, compras parceladas, alarmes exatos e galeria completa com as 25 capturas reais em retrato com filtros e lightbox."
+      },
+      {
+        "caminho": "index.html",
+        "natureza": "alteracao",
+        "descricao": "Substituição de imagens quebradas por capturas reais (Dashboard, Agenda, Totais Financeiros, Catálogo de Serviços, PDV Checkout e Gráfico de Rosca) e adição de link para lite.html na barra de navegação e seção do TimeCare Lite."
+      },
+      {
+        "caminho": "salao.html",
+        "natureza": "alteracao",
+        "descricao": "Correção de imagens quebradas apontando para Dashboard, Agenda e Financeiro reais, além de link na barra de navegação para a página do TimeCare Lite."
+      },
+      {
+        "caminho": "clinica.html",
+        "natureza": "alteracao",
+        "descricao": "Atualização do menu de navegação incluindo link direto para TimeCare Lite (lite.html)."
+      },
+      {
+        "caminho": "styles/main.css",
+        "natureza": "alteracao",
+        "descricao": "Adicionados estilos para o mockup de celular 576x1328, cards de precificação, galeria responsiva e correção de espaçamento, flex-shrink e breakpoints da barra de navegação para eliminar encavalamento de itens."
+      },
+      {
+        "caminho": "sitemap.xml",
+        "natureza": "alteracao",
+        "descricao": "Inclusão da URL https://timecare.com.br/lite.html com prioridade 0.98."
+      }
+    ],
+    "nao_commitado": [
+      "Alterações desta sessão (working tree) — commit não solicitado"
+    ],
+    "pendente_de_teste": [
+      "Visualização em diferentes resoluções e teste de reprodução do vídeo em navegadores móveis."
+    ]
+  },
+  "decisoes_da_sessao": [
+    {
+      "decisao": "Criação de lite.html dedicada mantendo index.html como Hub Geral e preservando salao.html para campanhas de beleza",
+      "motivo": "O TimeCare Lite atende 11 segmentos comerciais além de salões de beleza (medicina, nutrição, pet care, tattoo, odontologia, etc.), requerendo uma página completa que expusesse todo o potencial comercial do app descrito em comercial.md sem sobrecarregar a home.",
+      "alternativa_descartada": "Colocar todas as 25 imagens e todas as seções comerciais apenas dentro de index.html, o que tornaria a página principal excessivamente longa e confusa.",
+      "requer_revisao_arquitetural": false
+    },
+    {
+      "decisao": "Mockup de smartphone no hero de lite.html reproduzindo diretamente o vídeo real 576x1328",
+      "motivo": "Aumenta a conversão permitindo ao visitante ver a fluidez e o visual real do aplicativo em funcionamento antes mesmo de fazer o download.",
+      "alternativa_descartada": "Vídeo em formato landscape ou apenas imagem estática.",
+      "requer_revisao_arquitetural": false
+    }
+  ],
+  "impactos_cross_modulo": [
+    {
+      "modulo_afetado": "seo_sitemap",
+      "arquivo_alterado": "sitemap.xml",
+      "natureza_do_impacto": "Indexação da nova landing page do TimeCare Lite pelos motores de busca.",
+      "motivo": "Garantir SEO e descoberta orgânica do produto.",
+      "doc_atualizado": true
+    }
+  ],
+  "debito_tecnico": [],
+  "aprendizados": {
+    "o_que_nao_funciona_neste_contexto": [
+      "Nomes de arquivos com caracteres especiais e espaços funcionam bem em navegadores modernos, mas devem ser preservados fielmente nos caminhos relativos para evitar 404."
+    ],
+    "dependencias_desbloqueadas": [
+      "Página completa de conversão do TimeCare Lite disponível para campanhas genéricas ou orgânicas de autônomos."
+    ]
+  },
+  "continuidade": {
+    "intencao_em_aberto": "Monitorar cliques de download e taxa de engajamento nos botões de conversão.",
+    "proxima_acao_esperada": "Validar visualmente a página no navegador ou publicar alterações no GitHub Pages caso aprovado pelo usuário.",
+    "contexto_para_proxima_sessao": "A nova página lite.html foi criada e integrada ao ecossistema do site-timecare com todos os 25 prints reais e o vídeo 576x1328 em mockup responsivo. Todos os links quebrados na página principal (index.html) e em salao.html foram corrigidos com as novas imagens renomeadas."
+  }
+}

@@ -16,6 +16,12 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://timecare.com.br/salao.html">
 
+  <!-- Hreflang Tags para SEO Multilíngue -->
+  <link rel="alternate" hreflang="pt-BR" href="https://timecare.com.br/salao.html" />
+  <link rel="alternate" hreflang="en" href="https://timecare.com.br/en/salao.html" />
+  <link rel="alternate" hreflang="es" href="https://timecare.com.br/es/salao.html" />
+  <link rel="alternate" hreflang="x-default" href="https://timecare.com.br/salao.html" />
+
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://timecare.com.br/salao.html">
@@ -93,6 +99,53 @@
       </nav>
 
       <div class="nav-actions">
+        <!-- Seletor de Idioma -->
+        <div class="lang-selector" id="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Alterar idioma" aria-expanded="false">
+            <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>PT</span>
+            <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <a href="salao.html" class="lang-item active" data-lang="pt">
+              <span class="lang-flag">🇧🇷</span>
+              <span>Português</span>
+              <span class="lang-tag">PT</span>
+            </a>
+            <a href="en/salao.html" class="lang-item" data-lang="en">
+              <span class="lang-flag">🇺🇸</span>
+              <span>English</span>
+              <span class="lang-tag">EN</span>
+            </a>
+            <a href="es/salao.html" class="lang-item" data-lang="es">
+              <span class="lang-flag">🇪🇸</span>
+              <span>Español</span>
+              <span class="lang-tag">ES</span>
+            </a>
+            <span class="lang-item" style="opacity: 0.5; cursor: default;">
+              <span class="lang-flag">🇫🇷</span>
+              <span>Français</span>
+              <span class="lang-tag">Breve</span>
+            </span>
+            <span class="lang-item" style="opacity: 0.5; cursor: default;">
+              <span class="lang-flag">🇩🇪</span>
+              <span>Deutsch</span>
+              <span class="lang-tag">Breve</span>
+            </span>
+            <span class="lang-item" style="opacity: 0.5; cursor: default;">
+              <span class="lang-flag">🇮🇹</span>
+              <span>Italiano</span>
+              <span class="lang-tag">Breve</span>
+            </span>
+          </div>
+        </div>
+
         <a href="https://play.google.com/store/apps/details?id=br.com.iatech.timecare_lite&pcampaignid=web_share"
           target="_blank" rel="noopener noreferrer" class="btn btn-lite btn-sm track-playstore-download" data-download-source="navbar_btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">

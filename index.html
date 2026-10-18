@@ -14,11 +14,17 @@
     content="gestão de clínicas, software para dentistas, prontuário eletrônico, agenda médica, TimeCare, TimeCare Lite, app para médicos, controle de estoque para clínicas, sistema para clínicas estéticas, app de agendamento autônomo">
   <meta name="author" content="iA Tech">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://iatech.github.io/timecare/">
+  <link rel="canonical" href="https://timecare.com.br/">
+
+  <!-- Hreflang Tags para SEO Multilíngue -->
+  <link rel="alternate" hreflang="pt-BR" href="https://timecare.com.br/" />
+  <link rel="alternate" hreflang="en" href="https://timecare.com.br/en/" />
+  <link rel="alternate" hreflang="es" href="https://timecare.com.br/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://timecare.com.br/" />
 
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://iatech.github.io/timecare/">
+  <meta property="og:url" content="https://timecare.com.br/">
   <meta property="og:title" content="TimeCare | Gestão Inteligente para Clínicas e Autônomos de Saúde">
   <meta property="og:description"
     content="A tecnologia sob medida para sua prática profissional: Do consultório autônomo à clínica multiprofissional com IA e privacidade.">
@@ -151,6 +157,53 @@
       </nav>
 
       <div class="nav-actions">
+        <!-- Seletor de Idioma -->
+        <div class="lang-selector" id="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Alterar idioma" aria-expanded="false">
+            <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>PT</span>
+            <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <a href="index.html" class="lang-item active" data-lang="pt">
+              <span class="lang-flag">🇧🇷</span>
+              <span>Português</span>
+              <span class="lang-tag">PT</span>
+            </a>
+            <a href="en/index.html" class="lang-item" data-lang="en">
+              <span class="lang-flag">🇺🇸</span>
+              <span>English</span>
+              <span class="lang-tag">EN</span>
+            </a>
+            <a href="es/index.html" class="lang-item" data-lang="es">
+              <span class="lang-flag">🇪🇸</span>
+              <span>Español</span>
+              <span class="lang-tag">ES</span>
+            </a>
+            <span class="lang-item" style="opacity: 0.5; cursor: default;">
+              <span class="lang-flag">🇫🇷</span>
+              <span>Français</span>
+              <span class="lang-tag">Breve</span>
+            </span>
+            <span class="lang-item" style="opacity: 0.5; cursor: default;">
+              <span class="lang-flag">🇩🇪</span>
+              <span>Deutsch</span>
+              <span class="lang-tag">Breve</span>
+            </span>
+            <span class="lang-item" style="opacity: 0.5; cursor: default;">
+              <span class="lang-flag">🇮🇹</span>
+              <span>Italiano</span>
+              <span class="lang-tag">Breve</span>
+            </span>
+          </div>
+        </div>
+
         <button type="button" class="btn btn-primary btn-sm btn-open-lead-modal">Falar com a Equipe</button>
       </div>
 

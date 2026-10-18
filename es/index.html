@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeCare | Gestión Inteligente para Clínicas y Profesionales Autónomos</title>
+
+  <!-- Meta Tags de SEO Primarias -->
+  <meta name="title" content="TimeCare | Gestión Inteligente para Clínicas y Profesionales Autónomos">
+  <meta name="description"
+    content="Descubre la plataforma TimeCare: TimeCare Pro para clínicas médicas, odontológicas y estéticas con gestión de equipos, historia clínica, stock e IA; y TimeCare Lite para profesionales independientes con tecnología Local-First SQLite y privacidad total.">
+  <meta name="keywords"
+    content="software para clínicas, sistema para consultorios, historia clínica digital, turnos médicos, TimeCare, TimeCare Lite, app para autónomos, control de stock clínicas, app para salones de belleza">
+  <meta name="author" content="iA Tech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://timecare.com.br/es/">
+
+  <!-- Hreflang Tags para SEO Multilingüe -->
+  <link rel="alternate" hreflang="pt-BR" href="https://timecare.com.br/" />
+  <link rel="alternate" hreflang="en" href="https://timecare.com.br/en/" />
+  <link rel="alternate" hreflang="es" href="https://timecare.com.br/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://timecare.com.br/" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://timecare.com.br/es/">
+  <meta property="og:title" content="TimeCare | Gestión Inteligente para Clínicas y Autónomos">
+  <meta property="og:description"
+    content="Tecnología a la medida de tu práctica profesional: desde consultorios independientes hasta clínicas multi-especialistas con IA y total privacidad.">
+  <meta property="og:image" content="../logo/logo.webp">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="TimeCare">
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://timecare.com.br/es/">
+  <meta property="twitter:title" content="TimeCare | Gestión Inteligente para Clínicas y Autónomos">
+  <meta property="twitter:description"
+    content="Desde profesionales independientes hasta clínicas con múltiples salas. Conoce TimeCare Pro y TimeCare Lite.">
+  <meta property="twitter:image" content="../logo/logo.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="../logo/logo.webp">
+  <link rel="apple-touch-icon" href="../logo/logo.webp">
+
+  <!-- Google Fonts (Inter & Outfit) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos CSS Principales -->
+  <link rel="stylesheet" href="../styles/main.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6NLGSJX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'GT-W6NLGSJX');
+  </script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://timecare.com.br/#organization",
+        "name": "iA Tech",
+        "url": "https://timecare.com.br/es/",
+        "logo": "https://timecare.com.br/logo/logo.webp",
+        "description": "Ingeniería de software especializada en gestión de salud, inteligencia artificial y soluciones de agendamiento."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://timecare.com.br/#timecare-pro",
+        "name": "TimeCare Pro",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Windows, Android, iOS (PWA)",
+        "description": "Sistema SaaS para clínicas médicas, odontológicas y estéticas con gestión de equipos, historia clínica electrónica, stock integrado e IA predictiva."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://timecare.com.br/#timecare-lite",
+        "name": "TimeCare Lite",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Android",
+        "description": "App móvil Local-First con SQLite para profesionales independientes, médicos, salones y terapeutas con privacidad financiera total."
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="has-campaign-bar">
+
+  <!-- Barra Superior de Campaña -->
+  <aside class="campaign-bar" aria-label="Aviso Especial">
+    <div class="campaign-bar-text">
+      <span class="campaign-bar-badge">Edición Global</span>
+      <span>¿Buscas la app gratuita para autónomos con base de datos 100% offline?</span>
+      <a href="lite.html" class="campaign-bar-link track-lite-click">Explorar TimeCare Lite &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-mid-right" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-left" aria-hidden="true"></div>
+
+  <!-- Header & Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" title="TimeCare - Inicio">
+        <img src="../logo/logo.webp" alt="Logotipo TimeCare" class="navbar-logo" width="44" height="44">
+        <span>TimeCare</span>
+      </a>
+
+      <nav aria-label="Navegación Principal">
+        <ul class="navbar-nav">
+          <li><a href="lite.html" class="nav-link track-lite-click" style="color: #059669; font-weight: 700;">App Lite</a></li>
+          <li><a href="salao.html" class="nav-link track-salao-click">Salones & Belleza</a></li>
+          <li><a href="clinica.html" class="nav-link track-clinica-click" style="color: #2563eb; font-weight: 700;">Clínicas (SaaS)</a></li>
+          <li><a href="#comparativo" class="nav-link">Comparativa</a></li>
+          <li><a href="#galeria" class="nav-link">Pantallas</a></li>
+          <li><a href="#seguranca" class="nav-link">Seguridad</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Selector de Idioma -->
+        <div class="lang-selector" id="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Seleccionar idioma" aria-expanded="false">
+            <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>ES</span>
+            <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <a href="../index.html" class="lang-item" data-lang="pt">
+              <span class="lang-flag">🇧🇷</span>
+              <span>Português</span>
+              <span class="lang-tag">PT</span>
+            </a>
+            <a href="../en/index.html" class="lang-item" data-lang="en">
+              <span class="lang-flag">🇺🇸</span>
+              <span>English</span>
+              <span class="lang-tag">EN</span>
+            </a>
+            <a href="index.html" class="lang-item active" data-lang="es">
+              <span class="lang-flag">🇪🇸</span>
+              <span>Español</span>
+              <span class="lang-tag">ES</span>
+            </a>
+            <span class="lang-item" style="opacity: 0.5; cursor: default;">
+              <span class="lang-flag">🇫🇷</span>
+              <span>Français</span>
+              <span class="lang-tag">Pronto</span>
+            </span>
+            <span class="lang-item" style="opacity: 0.5; cursor: default;">
+              <span class="lang-flag">🇩🇪</span>
+              <span>Deutsch</span>
+              <span class="lang-tag">Pronto</span>
+            </span>
+            <span class="lang-item" style="opacity: 0.5; cursor: default;">
+              <span class="lang-flag">🇮🇹</span>
+              <span>Italiano</span>
+              <span class="lang-tag">Pronto</span>
+            </span>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-sm btn-open-lead-modal">Contáctanos</button>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Abrir Menú de Navegación" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content scroll-reveal">
+          <div class="badge badge-glow">Agendamiento Inteligente y Gestión</div>
+          <h1 class="hero-title">
+            La tecnología correcta para tu escala: <span>Desde autónomos hasta clínicas</span>
+          </h1>
+          <p class="hero-description">
+            Transparencia total e ingeniería sólida. Descubre las dos ediciones de la plataforma <strong>TimeCare</strong> diseñadas específicamente para adaptarse a tu realidad operativa.
+          </p>
+
+          <!-- Selector de Segmentos de Alta Conversión -->
+          <div class="segment-selector-wrapper scroll-reveal">
+            <div class="segment-selector-header">
+              <span class="badge badge-glow" style="margin-bottom: 0.5rem;">Guía Rápida por Rubro</span>
+              <h3>¿Qué tipo de actividad desarrollas?</h3>
+              <p>Elige tu sector para acceder a las herramientas pensadas para tu rutina diaria:</p>
+            </div>
+
+            <div class="segment-cards-grid">
+              <!-- Tarjeta A: Salones y Autónomos -->
+              <div class="segment-card segment-card-salao">
+                <div>
+                  <div class="segment-card-badge-wrap">
+                    <span class="segment-badge-campaign">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                      </svg>
+                      Autónomos y Salones &bull; App Gratuita
+                    </span>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #059669;">TimeCare Lite</span>
+                  </div>
+
+                  <div class="segment-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="6" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                      <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                      <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                    </svg>
+                  </div>
+
+                  <h4>Salones de Belleza, Barberías y Autónomos</h4>
+                  <div class="segment-card-target">Para peluqueros, manicuristas, barberos, terapeutas y esteticistas</div>
+
+                  <ul class="segment-card-features">
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Agenda visual móvil:</strong> agenda turnos en segundos sin citas dobles ni enredos en papel.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Control de caja y gastos:</strong> registra ingresos en efectivo, tarjeta y pagos digitales al instante.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Recordatorios por WhatsApp:</strong> reduce las inasistencias con confirmaciones educadas en un toque.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>100% Gratis y sin Internet:</strong> base SQLite Local-First en tu móvil sin mensualidad obligatoria.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="segment-card-action">
+                  <a href="salao.html" class="btn btn-segment-salao track-salao-click">
+                    Ver Página de Salones y Descargar Gratis &rarr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Tarjeta B: Clínicas y Equipos Médicos -->
+              <div class="segment-card segment-card-clinica">
+                <div>
+                  <div class="segment-card-badge-wrap">
+                    <span class="badge badge-pro" style="margin-bottom: 0;">SaaS Corporativo</span>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #2563eb;">TimeCare Pro</span>
+                  </div>
+
+                  <div class="segment-card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                  </div>
+
+                  <h4>Clínicas Médicas, Odontológicas y Centros de Salud</h4>
+                  <div class="segment-card-target">Para consultorios odontológicos, centros de salud y clínicas con equipo</div>
+
+                  <ul class="segment-card-features">
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Gobernanza Multi-Profesional:</strong> agendas unificadas, permisos para secretarias y roles seguros.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Historia Clínica Electrónica:</strong> fichas clínicas, evoluciones de tratamiento y auditoría completa.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Inventario Automatizado:</strong> baja automática de insumos vinculados al procedimiento médico.</span>
+                    </li>
+                    <li>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span><strong>Flujo de Caja y Split:</strong> división de comisiones por especialista y estados financieros precisos.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="segment-card-action">
+                  <a href="clinica.html" class="btn btn-segment-clinica track-clinica-click">
+                    Explorar Soluciones para Clínicas &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--text-muted);">
+            O desliza hacia abajo para comparar las ediciones Pro y Lite en detalle &darr;
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Dive: TimeCare Pro -->
+    <section class="section product-showcase" id="timecare-pro">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="badge badge-pro">TimeCare Pro — Plataforma Completa</span>
+          <h2>Potencia Operativa para Clínicas y Equipos Médicos</h2>
+          <p>
+            Plataforma B2B SaaS diseñada para eliminar cuellos de botella en recepción, mantener el flujo de caja en tiempo real y asegurar la gobernanza completa entre especialistas.
+          </p>
+        </div>
+
+        <div class="showcase-grid scroll-reveal">
+          <div class="showcase-visual">
+            <div class="floating-badge floating-badge-1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Descuento Automático de Insumos</span>
+            </div>
+            <div class="floating-badge floating-badge-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              <span>Flujo de Caja en Tiempo Real</span>
+            </div>
+
+            <div class="showcase-image-wrap">
+              <img src="../timecare/dashboard principal-desktop.webp"
+                alt="Panel Principal TimeCare Pro para Clínicas" loading="lazy">
+            </div>
+          </div>
+          <div class="showcase-content">
+            <h3>Visión Integral de tu Centro de Salud</h3>
+            <p>
+              TimeCare Pro centraliza todo el ciclo de atención: desde la reserva de turnos hasta la documentación clínica, el consumo de insumos y la facturación consolidada.
+            </p>
+
+            <div class="showcase-features-grid">
+              <div class="feature-mini-card">
+                <div class="feature-icon icon-pro">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <h4>Control de Roles (RBAC)</h4>
+                <p>Niveles de acceso para administradores, médicos, enfermeros y recepcionistas.</p>
+              </div>
+
+              <div class="feature-mini-card">
+                <div class="feature-icon icon-pro">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <h4>Historia Clínica Digital</h4>
+                <p>Historial seguro, odontograma, recetas digitales y archivos adjuntos.</p>
+              </div>
+
+              <div class="feature-mini-card">
+                <div class="feature-icon icon-pro">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                  </svg>
+                </div>
+                <h4>Stock Vinculado a Procedimientos</h4>
+                <p>Deduce automáticamente materiales al finalizar la atención médica.</p>
+              </div>
+
+              <div class="feature-mini-card">
+                <div class="feature-icon icon-pro">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                  </svg>
+                </div>
+                <h4>IA Predictiva y Operativa</h4>
+                <p>Alertas inteligentes para optimizar horarios ociosos y predecir ausencias.</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <button type="button" class="btn btn-pro btn-md btn-open-lead-modal">Solicitar Demostración de TimeCare Pro &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Dive: TimeCare Lite -->
+    <section class="section" id="timecare-lite">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="badge badge-lite">TimeCare Lite — App Local-First</span>
+          <h2>Privacidad Absoluta y Velocidad para Profesionales Autónomos</h2>
+          <p>
+            Diseñado para médicos, odontólogos, terapeutas y salones independientes que necesitan rapidez instantánea, funcionamiento 100% offline y la garantía de que sus datos financieros nunca salgan de su celular.
+          </p>
+        </div>
+
+        <div class="showcase-grid scroll-reveal">
+          <div class="showcase-visual">
+            <div class="floating-badge floating-badge-1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Base Local-First SQLite</span>
+            </div>
+            <div class="floating-badge floating-badge-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2.5">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+              </svg>
+              <span>Recordatorios por WhatsApp</span>
+            </div>
+
+            <div class="showcase-image-wrap">
+              <img src="../timecare_lite_novas/1. Dashboard.webp" alt="Resumen de Funciones TimeCare Lite" loading="lazy">
+            </div>
+          </div>
+          <div class="showcase-content">
+            <h3>Tus Datos Permanecen en tu Teléfono</h3>
+            <p>
+              A diferencia de las aplicaciones tradicionales que guardan todo en servidores remotos, TimeCare Lite adopta la arquitectura <strong>Local-First</strong>:
+            </p>
+
+            <div class="showcase-features-grid">
+              <div class="feature-mini-card">
+                <div class="feature-icon icon-lite">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </div>
+                <h4>Soberanía Financiera</h4>
+                <p>Tus precios, cobros y gastos residen únicamente en la base SQLite de tu teléfono.</p>
+              </div>
+
+              <div class="feature-mini-card">
+                <div class="feature-icon icon-lite">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <h4>Relay Transitorio</h4>
+                <p>La nube solo funciona como un buzón momentáneo de turnos; los mensajes se borran tras entregarse.</p>
+              </div>
+
+              <div class="feature-mini-card">
+                <div class="feature-icon icon-lite">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                  </svg>
+                </div>
+                <h4>Cuarentena Anti-Spam</h4>
+                <p>Las solicitudes públicas entran a una fila privada. Aprueba o descarta con un solo toque.</p>
+              </div>
+
+              <div class="feature-mini-card">
+                <div class="feature-icon icon-lite">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <h4>WhatsApp Directo</h4>
+                <p>Sin bots engorrosos: las confirmaciones se abren directamente en la conversación de WhatsApp.</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <a href="https://play.google.com/store/apps/details?id=br.com.iatech.timecare_lite&pcampaignid=web_share"
+                target="_blank" rel="noopener noreferrer" class="btn btn-lite btn-md">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M3.609 1.814L13.792 12 3.61 22.186a1.986 1.986 0 0 1-.61-1.414V3.228c0-.53.21-1.04.609-1.414zM15.206 13.414l2.42 2.42-12.822 7.4c.594.34 1.34.27 1.866-.17l8.536-9.65zm0-2.828l-8.536-9.65A1.99 1.99 0 0 0 4.804.766l12.822 7.4-2.42 2.42zm2.122 1.414l3.52-2.03a1.997 1.997 0 0 0 0-3.46l-3.52-2.03-2.12 2.12 2.12 5.4z" />
+                </svg>
+                Descargar TimeCare Lite Gratis en Google Play &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabla Comparativa -->
+    <section class="section product-showcase" id="comparativo">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="badge badge-glow">Transparencia Total</span>
+          <h2>¿Qué Edición de TimeCare se Adapta a tus Necesidades?</h2>
+          <p>
+            Sin letra pequeña: compara lado a lado para elegir el software adecuado a tu escala.
+          </p>
+        </div>
+
+        <div class="table-container scroll-reveal">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th class="col-pro">TimeCare Pro</th>
+                <th class="col-lite">TimeCare Lite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="feature-name">Público Objetivo</span>
+                  <span class="feature-desc">Estructura recomendada</span>
+                </td>
+                <td>
+                  <span class="status-highlight status-pro">Clínicas Médicas, Dentales y Equipos de Salud</span>
+                </td>
+                <td>
+                  <span class="status-highlight status-lite">Autónomos, Consultorios Propios y Salones</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Arquitectura de Datos</span>
+                  <span class="feature-desc">Dónde residen los datos</span>
+                </td>
+                <td>
+                  <strong>Nube Corporativa Multi-Tenant</strong><br>
+                  <small style="color: var(--text-muted);">Copia de seguridad continua y sincronización multi-dispositivo.</small>
+                </td>
+                <td>
+                  <strong>Local-First (SQLite en tu Dispositivo)</strong><br>
+                  <small style="color: var(--text-muted);">Relay transitorio solo para solicitudes entrantes.</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Gestión de Roles (RBAC)</span>
+                  <span class="feature-desc">Varios médicos, recepcionistas</span>
+                </td>
+                <td>
+                  <span class="status-highlight status-pro">Sí (Control completo de permisos por rol)</span>
+                </td>
+                <td>
+                  <span class="status-highlight status-lite">Optimizado para Gestión Unipersonal</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Historia Clínica Digital</span>
+                  <span class="feature-desc">Fichas de pacientes y evolución</span>
+                </td>
+                <td>
+                  <span class="status-highlight status-pro">EHR Completo + CRM Avanzado</span>
+                </td>
+                <td>
+                  <span class="status-highlight status-lite">Fichas y Notas de Sesión Locales</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Gestión de Stock</span>
+                  <span class="feature-desc">Baja de insumos por procedimiento</span>
+                </td>
+                <td>
+                  <span class="status-highlight status-pro">Sí (Consumo automático por acto clínico)</span>
+                </td>
+                <td>
+                  <span class="status-highlight status-lite">Sí (Catálogo de Productos y POS con stock)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Privacidad Financiera</span>
+                  <span class="feature-desc">Dónde viajan tus cifras contables</span>
+                </td>
+                <td>
+                  Cifrado en la nube multi-tenant
+                </td>
+                <td>
+                  <strong>Cero exposición a la nube</strong> (100% en SQLite de tu móvil)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="feature-name">Plataformas Soportadas</span>
+                  <span class="feature-desc">Dispositivos compatibles</span>
+                </td>
+                <td>
+                  Web, Desktop (Windows/Mac) y PWA Móvil
+                </td>
+                <td>
+                  App Nativa Android (Google Play Store)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería de Pantallas Reales -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="badge badge-glow">Interfaces Reales</span>
+          <h2>Diseñado para una Interacción Diaria Ágil</h2>
+          <p>
+            Sin maquetas abstractas: estas son las pantallas que tú y tu equipo utilizarán todos los días.
+          </p>
+        </div>
+
+        <div class="gallery-filter-nav scroll-reveal">
+          <button class="filter-btn active" data-filter="all">Todas las Pantallas</button>
+          <button class="filter-btn" data-filter="pro">TimeCare Pro (Clínicas)</button>
+          <button class="filter-btn" data-filter="lite">TimeCare Lite (Móvil)</button>
+        </div>
+
+        <div class="gallery-grid scroll-reveal" id="gallery-container">
+          <!-- TimeCare Pro Screenshots -->
+          <div class="gallery-item" data-category="pro" data-fullsrc="../timecare/dashboard principal-desktop.webp">
+            <div class="gallery-thumb-wrap">
+              <img src="../timecare/dashboard principal-desktop.webp" alt="Panel Principal - TimeCare Pro" loading="lazy">
+              <div class="gallery-item-overlay">
+                <span class="btn btn-secondary btn-sm">Ampliar Pantalla</span>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <div class="gallery-item-tag">TimeCare Pro &bull; Desktop</div>
+              <div class="gallery-item-title">Panel General de la Clínica</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pro" data-fullsrc="../timecare/dashboard-financeiro-desktop.webp">
+            <div class="gallery-thumb-wrap">
+              <img src="../timecare/dashboard-financeiro-desktop.webp" alt="Flujo de Caja e Informes - TimeCare Pro" loading="lazy">
+              <div class="gallery-item-overlay">
+                <span class="btn btn-secondary btn-sm">Ampliar Pantalla</span>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <div class="gallery-item-tag">TimeCare Pro &bull; Desktop</div>
+              <div class="gallery-item-title">Flujo de Caja y Estados Financieros</div>
+            </div>
+          </div>
+
+          <!-- TimeCare Lite Screenshots -->
+          <div class="gallery-item" data-category="lite" data-fullsrc="../timecare_lite_novas/1. Dashboard.webp">
+            <div class="gallery-thumb-wrap">
+              <img src="../timecare_lite_novas/1. Dashboard.webp" alt="Resumen de Funciones - TimeCare Lite" loading="lazy">
+              <div class="gallery-item-overlay">
+                <span class="btn btn-secondary btn-sm">Ampliar Pantalla</span>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <div class="gallery-item-tag">TimeCare Lite &bull; Android</div>
+              <div class="gallery-item-title">Visión General para Autónomos</div>
+            </div>
+          </div>
+
+          <div class="gallery-item mobile-shot" data-category="lite" data-fullsrc="../timecare_lite_novas/2. Agenda.webp">
+            <div class="gallery-thumb-wrap">
+              <img src="../timecare_lite_novas/2. Agenda.webp" alt="Agenda y Horarios - TimeCare Lite" loading="lazy">
+              <div class="gallery-item-overlay">
+                <span class="btn btn-secondary btn-sm">Ampliar Pantalla</span>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <div class="gallery-item-tag">TimeCare Lite &bull; App</div>
+              <div class="gallery-item-title">Agenda por Horas y Asignación de Turnos</div>
+            </div>
+          </div>
+
+          <div class="gallery-item mobile-shot" data-category="lite" data-fullsrc="../timecare_lite_novas/teala financeiro totais e graficos.webp">
+            <div class="gallery-thumb-wrap">
+              <img src="../timecare_lite_novas/teala financeiro totais e graficos.webp" alt="Gastos y Caja - TimeCare Lite" loading="lazy">
+              <div class="gallery-item-overlay">
+                <span class="btn btn-secondary btn-sm">Ampliar Pantalla</span>
+              </div>
+            </div>
+            <div class="gallery-item-info">
+              <div class="gallery-item-tag">TimeCare Lite &bull; App</div>
+              <div class="gallery-item-title">Control Financiero y Caja 100% Offline</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="badge badge-glow">FAQ</span>
+          <h2>Preguntas Frecuentes</h2>
+          <p>Respuestas claras sobre el ecosistema TimeCare.</p>
+        </div>
+
+        <div class="faq-list scroll-reveal">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿Puedo empezar en TimeCare Lite y migrar a TimeCare Pro más adelante?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                ¡Sí! A medida que tu consultorio crezca y requiera secretarias, socios y múltiples salas, nuestro equipo te ayudará en la transición hacia la plataforma corporativa TimeCare Pro.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿TimeCare Lite funciona sin conexión a internet?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Totalmente. TimeCare Lite guarda todos tus turnos, productos y finanzas en la base de datos local SQLite de tu teléfono. Nunca perderás acceso incluso en modo avión.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>¿Cómo gestiona los permisos de equipo TimeCare Pro?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                TimeCare Pro cuenta con control de acceso basado en roles (RBAC). Las recepcionistas solo ven agenda y cobros, los profesionales médicos acceden a sus historias clínicas, y la administración conserva el control total financiero y de stock.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        <div class="contact-box scroll-reveal">
+          <span class="badge badge-glow">Atención Oficial</span>
+          <h2>Ponte en Contacto con Nuestro Equipo</h2>
+          <p>
+            Tanto para coordinar una demostración en vivo de TimeCare Pro como para resolver dudas sobre TimeCare Lite, nuestros canales están a tu disposición.
+          </p>
+
+          <div class="contact-channels-grid">
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-card-title">Correo de Atención</div>
+              <div class="contact-card-desc">Canal oficial para dudas, propuestas y soporte</div>
+              <div class="obfuscated-container">
+                <button type="button" class="btn btn-primary btn-sm contact-reveal-btn" id="btn-reveal-email">
+                  <span>Revelar Correo / Enviar Mensaje</span>
+                </button>
+                <div class="contact-value-display" id="display-email"></div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <div class="contact-card-title">WhatsApp / Teléfono</div>
+              <div class="contact-card-desc">Atención rápida para consultas y demostraciones</div>
+              <div class="obfuscated-container">
+                <button type="button" class="btn btn-lite btn-sm contact-reveal-btn" id="btn-reveal-wa">
+                  <span>Abrir WhatsApp</span>
+                </button>
+                <div class="contact-value-display" id="display-wa"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de Captura de Leads -->
+  <div class="lead-modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
+    <div class="lead-modal-content">
+      <button class="lead-modal-close" id="lead-modal-close" aria-label="Cerrar modal">&times;</button>
+      <div class="lead-modal-header">
+        <span class="badge badge-pro">TimeCare Pro — Solicitud de Demostración</span>
+        <h3 id="lead-modal-title">Solicita una Demostración Personalizada</h3>
+        <p>Completa el formulario para recibir una presentación a la medida de tu centro de salud.</p>
+      </div>
+
+      <form id="lead-capture-form" action="https://formsubmit.co/atendimento.iatech@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nueva Solicitud de Demostración - TimeCare Pro (Sitio Español)">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-group">
+          <label for="lead-nome">Nombre Completo *</label>
+          <input type="text" id="lead-nome" name="nome" placeholder="Ej: Dr. Juan Martínez" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lead-email">Correo Electrónico Laboral *</label>
+          <input type="email" id="lead-email" name="email" placeholder="Ej: contacto@tuclinica.com" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="lead-telefone">Teléfono / WhatsApp *</label>
+            <input type="tel" id="lead-telefone" name="telefone" placeholder="+34 600 000 000" required>
+          </div>
+
+          <div class="form-group">
+            <label for="lead-usuarios">Profesionales / Usuarios *</label>
+            <select id="lead-usuarios" name="quantidade_profissionais" required>
+              <option value="" disabled selected>Selecciona cantidad</option>
+              <option value="1 to 3 practitioners">1 a 3 profesionales</option>
+              <option value="4 to 10 practitioners">4 a 10 profesionales</option>
+              <option value="11 to 25 practitioners">11 a 25 profesionales</option>
+              <option value="More than 25 practitioners">Más de 25 profesionales</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-pro btn-lg form-submit-btn" id="lead-submit-btn">
+          <span>Enviar Solicitud</span>
+        </button>
+      </form>
+
+      <div class="form-success-message" id="form-success-message" style="display: none;">
+        <h4>¡Solicitud Enviada con Éxito!</h4>
+        <p>¡Muchas gracias por tu interés! Nuestro equipo se comunicará en breve.</p>
+        <button type="button" class="btn btn-secondary btn-sm" id="btn-close-success">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Visor de Imágenes">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar visor">&times;</button>
+      <img src="" alt="" class="lightbox-image" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <img src="../logo/logo.webp" alt="Logotipo TimeCare" width="32" height="32" style="border-radius: 6px;">
+            <span>TimeCare</span>
+          </div>
+          <p>
+            Plataformas especializadas de gestión y agendamiento para centros de salud, profesionales independientes y salones.
+          </p>
+          <p style="font-size: 0.8rem; color: #94a3b8;">
+            Diseñado con excelencia por <strong>iA Tech</strong>.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Soluciones</div>
+          <ul class="footer-links">
+            <li><a href="lite.html" style="font-weight: 700; color: #059669;">TimeCare Lite (App Autónoma)</a></li>
+            <li><a href="salao.html">Salones y Estética</a></li>
+            <li><a href="clinica.html">TimeCare Pro (Clínicas)</a></li>
+            <li><a href="#comparativo">Comparativa Completa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Arquitectura</div>
+          <ul class="footer-links">
+            <li><a href="#seguranca">Local-First (SQLite)</a></li>
+            <li><a href="#seguranca">Privacidad y Cifrado</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contato">Contáctanos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Descarga</div>
+          <p style="font-size: 0.85rem; margin-bottom: 0.75rem;">
+            Instala TimeCare Lite directamente desde Google Play:
+          </p>
+          <a href="https://play.google.com/store/apps/details?id=br.com.iatech.timecare_lite&pcampaignid=web_share"
+            target="_blank" rel="noopener noreferrer" style="color: #38bdf8; font-weight: 700; font-size: 0.9rem;">
+            Ver en Google Play Store &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 iA Tech — Todos los derechos reservados. TimeCare&trade; y TimeCare Lite&trade;.
+        </div>
+        <div>
+          Marketing Transparente &bull; Privacidad Absoluta &bull; Alto Desempeño
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

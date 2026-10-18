@@ -3,6 +3,9 @@
  * Light Theme Edition with Lead Capture Modal (FormSubmit), Scroll Reveal, Lightbox & Obfuscated Contacts
  */
 
+// Immediate auto language detection for non-PT visitors on root pages
+checkAutoLanguageRedirect();
+
 document.addEventListener('DOMContentLoaded', () => {
   initObfuscatedContacts();
   initGalleryFilterAndLightbox();
@@ -12,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initLeadModalForm();
   initTrackingAndStickyCta();
+  initLanguageSwitcher();
 });
 
 /* ==========================================================================
@@ -453,4 +457,78 @@ function initTrackingAndStickyCta() {
       lastScrollY = currentScrollY;
     }, { passive: true });
   }
+}
+
+/* ==========================================================================
+   10. Language Switcher & Automatic Detection
+   ========================================================================== */
+function checkAutoLanguageRedirect() {
+  try {
+    const htmlLang = (document.documentElement.lang || 'pt-BR').toLowerCase();
+    // Only attempt auto-redirect if we are on the root Portuguese pages
+    if (!htmlLang.startsWith('pt')) return;
+
+    // Check if user has explicitly chosen Portuguese or another language
+    const savedLang = localStorage.getItem('timecare_user_lang');
+    if (savedLang === 'pt') return; // User wants Portuguese explicitly
+
+    // Check if session redirect already fired once to prevent loops
+    if (sessionStorage.getItem('timecare_lang_redirected')) return;
+
+    // Determine target language
+    let targetLang = savedLang;
+    if (!targetLang) {
+      const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (browserLang.startsWith('en')) {
+        targetLang = 'en';
+      } else if (browserLang.startsWith('es')) {
+        targetLang = 'es';
+      }
+    }
+
+    if (targetLang === 'en' || targetLang === 'es') {
+      sessionStorage.setItem('timecare_lang_redirected', 'true');
+      const currentPath = window.location.pathname;
+      let filename = currentPath.substring(currentPath.lastIndexOf('/') + 1) || 'index.html';
+      
+      // Determine relative redirect path
+      let targetUrl = targetLang + '/' + filename;
+      if (currentPath.endsWith('/') || filename === '' || filename === 'index.html') {
+        targetUrl = targetLang + '/index.html';
+      }
+
+      window.location.replace(targetUrl);
+    }
+  } catch (e) {
+    // Fail silently on storage restrictions or older browsers
+  }
+}
+
+function initLanguageSwitcher() {
+  const langSelectors = document.querySelectorAll('.lang-selector');
+  langSelectors.forEach(selector => {
+    const btn = selector.querySelector('.lang-btn');
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selector.classList.toggle('open');
+      });
+    }
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', () => {
+    langSelectors.forEach(selector => selector.classList.remove('open'));
+  });
+
+  // Save language preference on user selection
+  const langItems = document.querySelectorAll('.lang-item');
+  langItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const chosenLang = item.getAttribute('data-lang');
+      if (chosenLang) {
+        localStorage.setItem('timecare_user_lang', chosenLang);
+      }
+    });
+  });
 }

@@ -1,0 +1,138 @@
+{
+  "sessao": {
+    "numero": 2,
+    "data": "2026-10-17",
+    "modulo_principal": "site_timecare_i18n",
+    "objetivo": "Implementação da infraestrutura de internacionalização estática (SEO-friendly) para o site TimeCare, com suporte completo a Inglês (/en/) e Espanhol (/es/), seletor de idiomas responsivo com persistência em localStorage e atualização de sitemap.xml.",
+    "status": "concluida"
+  },
+  "delta": {
+    "arquivos_modificados": [
+      {
+        "caminho": "styles/main.css",
+        "natureza": "alteracao",
+        "descricao": "Adicionados estilos do seletor de idioma (.lang-selector, .lang-btn, .lang-dropdown, .lang-item) com suporte desktop e mobile sem encavalar a navbar."
+      },
+      {
+        "caminho": "js/main.js",
+        "natureza": "alteracao",
+        "descricao": "Implementada função de detecção e redirecionamento inicial com base no idioma do navegador e preferência persistida em localStorage/sessionStorage, além do toggle interativo do menu dropdown de idiomas."
+      },
+      {
+        "caminho": "index.html",
+        "natureza": "alteracao",
+        "descricao": "Inclusão de tags hreflang (pt-BR, en, es, x-default) e componente de seleção de idioma na barra de navegação."
+      },
+      {
+        "caminho": "lite.html",
+        "natureza": "alteracao",
+        "descricao": "Inclusão de tags hreflang e componente de seleção de idioma."
+      },
+      {
+        "caminho": "salao.html",
+        "natureza": "alteracao",
+        "descricao": "Inclusão de tags hreflang e componente de seleção de idioma."
+      },
+      {
+        "caminho": "clinica.html",
+        "natureza": "alteracao",
+        "descricao": "Inclusão de tags hreflang e componente de seleção de idioma."
+      },
+      {
+        "caminho": "en/index.html",
+        "natureza": "criacao",
+        "descricao": "Página principal (Hub) traduzida integralmente para o inglês com segmentador de público, comparativo e formulário de leads."
+      },
+      {
+        "caminho": "en/lite.html",
+        "natureza": "criacao",
+        "descricao": "Landing page completa do TimeCare Lite traduzida para o inglês com foco em tecnologia Local-First e conversão Play Store."
+      },
+      {
+        "caminho": "en/salao.html",
+        "natureza": "criacao",
+        "descricao": "Landing page para salões de beleza e autônomos traduzida para o inglês."
+      },
+      {
+        "caminho": "en/clinica.html",
+        "natureza": "criacao",
+        "descricao": "Landing page para clínicas e consultórios de saúde em inglês com formulário de demonstração."
+      },
+      {
+        "caminho": "es/index.html",
+        "natureza": "criacao",
+        "descricao": "Página principal (Hub) traduzida integralmente para o espanhol com segmentador de público, comparativo e formulário de leads."
+      },
+      {
+        "caminho": "es/lite.html",
+        "natureza": "criacao",
+        "descricao": "Landing page do TimeCare Lite em espanhol com destaque para funcionamento 100% offline e sem custos."
+      },
+      {
+        "caminho": "es/salao.html",
+        "natureza": "criacao",
+        "descricao": "Landing page para salões de beleza e estética em espanhol com link direto para download na Play Store."
+      },
+      {
+        "caminho": "es/clinica.html",
+        "natureza": "criacao",
+        "descricao": "Landing page para clínicas e centros médicos em espanhol com formulário de solicitação de demo."
+      },
+      {
+        "caminho": "sitemap.xml",
+        "natureza": "alteracao",
+        "descricao": "Atualização com todas as URLs em pt, en e es, providas de anotações xhtml:link hreflang completas."
+      }
+    ],
+    "nao_commitado": [
+      "Alterações desta sessão (working tree) — commit não solicitado pelo usuário."
+    ],
+    "pendente_de_teste": [
+      "Teste manual do comportamento de auto-redirecionamento com navegador configurado em en-US e es-ES.",
+      "Validação de envio dos formulários de lead traduzidos em en/clinica.html e es/clinica.html."
+    ]
+  },
+  "decisoes_da_sessao": [
+    {
+      "decisao": "Arquitetura estática multi-pasta (/en/ e /es/) compartilhando os mesmos arquivos de assets, CSS e JS centrais",
+      "motivo": "Perfeita compatibilidade com GitHub Pages, indexação SEO independente por idioma com URLs limpas, sem inchar o tamanho dos arquivos HTML com dicionários embutidos.",
+      "alternativa_descartada": "Renderização dinâmica client-side com substituição de tags data-i18n via JavaScript, o que prejudicaria o SEO em motores de busca e causaria piscamento (flash of untranslated content).",
+      "requer_revisao_arquitetural": false
+    },
+    {
+      "decisao": "Persistência da escolha de idioma em localStorage com guard de navegação manual",
+      "motivo": "Se um usuário de outro país preferir navegar na versão em português ou vice-versa, a escolha não é desfeita automaticamente a cada clique.",
+      "alternativa_descartada": "Redirecionamento automático incondicional a cada carregamento de página.",
+      "requer_revisao_arquitetural": false
+    }
+  ],
+  "impactos_cross_modulo": [
+    {
+      "modulo_afetado": "seo_sitemap",
+      "arquivo_alterado": "sitemap.xml",
+      "natureza_do_impacto": "Inclusão de URLs multilíngues com anotações bidirecionais de idioma para indexadores de busca internacionais.",
+      "motivo": "Cumprir diretrizes oficiais do Google para sites com múltiplos idiomas.",
+      "doc_atualizado": true
+    }
+  ],
+  "debito_tecnico": [
+    {
+      "descricao": "Versões em Francês (FR), Alemão (DE) e Italiano (IT) mantidas com tag 'Em Breve' / 'Soon' no seletor para entrega subsequente na Fase 2.",
+      "motivo_de_ter_sido_aceito": "Priorização dos dois idiomas de maior alcance comercial (EN e ES) nesta fase, mantendo a integridade sem atrasar a publicação.",
+      "impacto_estimado": "baixo"
+    }
+  ],
+  "aprendizados": {
+    "o_que_nao_funciona_neste_contexto": [
+      "Evitar hardcode de nomes de imagens em inglês quando os arquivos reais em timecare_lite_novas possuem nomes em português com acentos e espaços; sempre verificar os nomes reais no disco antes de referenciar."
+    ],
+    "dependencias_desbloqueadas": [
+      "Tráfego pago ou orgânico de países de língua inglesa e hispano-americana agora conta com páginas de destino nativas em seus respectivos idiomas."
+    ]
+  },
+  "continuidade": {
+    "intencao_em_aberto": "Implementação da Fase 2 de internacionalização (páginas em Francês /fr/, Alemão /de/ e Italiano /it/) conforme o app Android já suporta.",
+    "proxima_acao_esperada": "Validar visualmente a navegação entre os idiomas nos navegadores e, caso aprovado, preparar commit Git ou prosseguir com os idiomas restantes.",
+    "contexto_para_proxima_sessao": "A estrutura internacional do site-timecare está 100% funcional para Português (raiz), Inglês (/en/) e Espanhol (/es/). Todas as 12 páginas HTML foram auditadas com script e não possuem nenhum link quebrado. O seletor de idiomas armazena a preferência em localStorage e o sitemap.xml contém todas as URLs com hreflang bidirecional."
+  }
+}

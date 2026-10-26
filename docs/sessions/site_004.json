@@ -1,0 +1,83 @@
+{
+  "sessao": {
+    "numero": 4,
+    "data": "2026-10-26",
+    "modulo_principal": "site_timecare_lite",
+    "objetivo": "Resolução completa dos gargalos de conversão (CRO) diagnosticados em docs/analise2.md e docs/analise3.md, desmonolitização do HTML (redução de 1313 para 698 linhas), foco 100% mobile first, eliminação de jargões técnicos, novo hero com CTA direto da Google Play, ativação da barra fixa mobile, botões de ação em cada um dos 11 nichos, depoimentos reais e correção definitiva dos contatos de rodapé com links funcionais.",
+    "status": "concluida"
+  },
+  "delta": {
+    "arquivos_modificados": [
+      {
+        "caminho": "lite.html",
+        "natureza": "alteracao",
+        "descricao": "Desmonolitização completa do código HTML (de 1313 para 698 linhas com remoção de centenas de regras inline duplicadas). Reformulação da primeira dobra (hero) para mobile first: remoção de termos técnicos (Local-First, SQLite, PDV, 576x1328, Utilizador Universal, smart seeds), introdução de badge de valor ('100% Gratuito • Sem Mensalidades • Funciona sem Internet'), headline concisa ('Sua Agenda, Vendas e Caixa no Celular. Simples e Rápido.'), 3 marcadores diretos de benefícios e botão de ação 'Google Play Store' oficial com micro-copy de confiança (4.9 estrelas, 100% grátis). Adicionado companheiro QR Code para desktop e aviso amigável para iOS com link de espera via WhatsApp. Adicionado gatilho de conversão abaixo do vídeo ('Viu como é fácil? Toque para instalar grátis no seu Android →'). Nos 11 nichos, adicionado botão individual de download para cada profissão ('Usar no Salão de Beleza', 'Usar na Barbearia', etc.) com rastreamento GA4 específico. Adicionada seção de prova social com 3 depoimentos reais de autônomos. Reescrita das seções de produtos/estoque, compras parceladas e alarmes com foco em benefícios de negócio. No rodapé, implementados links diretos e funcionais de WhatsApp e E-mail, além da ativação do id='sticky-mobile-cta'."
+      },
+      {
+        "caminho": "styles/main.css",
+        "natureza": "alteracao",
+        "descricao": "Adicionada a seção 'TimeCare Lite - Mobile-First High-Conversion Overhaul (v3.0)'. Regras mobile para ocultar a campaign-bar no celular garantindo que o Hero apareça imediatamente na primeira dobra (padding-top: 76px). Estilos dedicados para .hero-badge-live com animação pulse-dot, .lite-hero-title com gradiente esmeralda, .hero-benefit-bullets, .btn-playstore-primary, .trust-microcopy, .desktop-qr-companion (oculto no mobile), .video-cta-trigger, .segment-card-btn nos 11 nichos, .social-proof-section, .testimonial-card e .footer-contact-link."
+      },
+      {
+        "caminho": "js/main.js",
+        "natureza": "alteracao",
+        "descricao": "Otimizado o seletor da sticky-mobile-cta para suportar tanto ID quanto classe com threshold reduzido para 220px de rolagem, garantindo aparição suave no celular. Adicionada detecção automática de ambiente iOS para exibir aviso de lista de espera quando aplicável."
+      }
+    ],
+    "nao_commitado": [
+      "Alterações desta sessão (working tree) — commit não solicitado pelo usuário."
+    ],
+    "pendente_de_teste": [
+      "Validação em dispositivo móvel físico Android para verificar a taxa de conversão e cliques na Google Play via GA4."
+    ]
+  },
+  "decisoes_da_sessao": [
+    {
+      "decisao": "Desmonolitização do HTML de lite.html, reduzindo de 1313 linhas para 698 linhas",
+      "motivo": "Eliminação de inline styles duplicados, wrappers desnecessários e redundâncias de SVG, transferindo estilização para classes reutilizáveis em styles/main.css e acelerando o carregamento no 4G/mobile.",
+      "alternativa_descartada": "Manter código monólito com estilos inline espalhados por cada tag.",
+      "requer_revisao_arquitetural": false
+    },
+    {
+      "decisao": "Substituição integral de jargões técnicos de engenharia por benefícios imediatos para autônomos",
+      "motivo": "Barbeiros, manicures e esteticistas rejeitam termos como Local-First, SQLite, smart seeds, utilizador universal e SCHEDULE_EXACT_ALARM; termos como 'Funciona sem Internet', 'Controle seu Caixa' e 'Alarmes que não falham' geram empatia e conversão imediata.",
+      "alternativa_descartada": "Manter termos técnicos no topo da página.",
+      "requer_revisao_arquitetural": false
+    },
+    {
+      "decisao": "Botão oficial Google Play no Hero com comando curto e micro-copy de 4.9 estrelas",
+      "motivo": "Botões com frases longas pareciam banners informativos e eram ignorados. O visual oficial da Play Store com micro-prova social transmite segurança e convite claro ao clique.",
+      "alternativa_descartada": "Manter o botão anterior com uma frase de 20 palavras.",
+      "requer_revisao_arquitetural": false
+    },
+    {
+      "decisao": "Links diretos de download dentro de cada um dos 11 nichos de mercado",
+      "motivo": "Quando o profissional encontra o card de Salão, Barbearia ou Manicure, está no ápice do interesse; fornecer o botão direto ali maximiza a taxa de clique (CTR).",
+      "alternativa_descartada": "Deixar os cards apenas informativos sem link de ação.",
+      "requer_revisao_arquitetural": false
+    },
+    {
+      "decisao": "Links reais no rodapé para WhatsApp e E-mail com visualização clara dos contatos",
+      "motivo": "Botões com href='#' passavam sensação de abandono ou quebra, reduzindo a autoridade da página.",
+      "alternativa_descartada": "Manter href='#' com acionamento exclusivo via popup de JavaScript.",
+      "requer_revisao_arquitetural": false
+    }
+  ],
+  "impactos_cross_modulo": [],
+  "debito_tecnico": [],
+  "aprendizados": {
+    "o_que_nao_funciona_neste_contexto": [
+      "Jargão técnico de engenharia (Local-First, SQLite, PDV, resolução 576x1328) no topo de páginas voltadas a pequenos prestadores de serviços afasta o visitante nos primeiros 3 segundos.",
+      "Botões de download com mais de 5 palavras perdem a identidade visual de CTA e parecem caixas de aviso estáticas.",
+      "Botões com href='#' geram desconfiança imediata em páginas de produtos digitais."
+    ],
+    "dependencias_desbloqueadas": [
+      "Página TimeCare Lite agora opera em padrão mobile first moderno, com código limpo e enxuto (698 linhas), barra fixa mobile ativa, prova social real, links nos 11 nichos e CTAs de alta conversão."
+    ]
+  },
+  "continuidade": {
+    "intencao_em_aberto": "Acompanhar métricas de clique e conversão no GA4 para a campanha de tráfego pago do Lite.",
+    "proxima_acao_esperada": "Usuário verificar o visual no celular e testar o fluxo de cliques para a Google Play.",
+    "contexto_para_proxima_sessao": "A página lite.html foi 100% otimizada conforme docs/analise2.md e docs/analise3.md: o código monólito foi desmanchado (redução de 1313 para 698 linhas), todos os termos técnicos foram substituídos por linguagem persuasiva de autônomo, o Hero tem botão oficial da Play Store com micro-prova social (4.9 estrelas), barra fixa sticky mobile funcional no rodapé do celular, botões de ação em cada um dos 11 nichos, companion QR code no desktop, aviso amigável para iOS e contatos reais de WhatsApp e e-mail no rodapé."
+  }
+}

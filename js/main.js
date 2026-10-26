@@ -442,20 +442,30 @@ function initTrackingAndStickyCta() {
     });
   });
 
-  // Sticky Mobile CTA Visibility
-  const stickyCta = document.getElementById('sticky-mobile-cta');
+  // Sticky Mobile CTA Visibility (Supports ID and Class)
+  const stickyCta = document.getElementById('sticky-mobile-cta') || document.querySelector('.sticky-mobile-cta');
   if (stickyCta) {
-    let lastScrollY = window.scrollY;
     window.addEventListener('scroll', () => {
       const currentScrollY = window.scrollY;
-      // Show sticky CTA once scrolled past 280px
-      if (currentScrollY > 280) {
+      // Show sticky CTA once scrolled past 220px
+      if (currentScrollY > 220) {
         stickyCta.classList.add('visible');
       } else {
         stickyCta.classList.remove('visible');
       }
-      lastScrollY = currentScrollY;
     }, { passive: true });
+  }
+
+  // iOS Device Detection Helper (shows friendly notice/waitlist link)
+  try {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+      document.querySelectorAll('.ios-friendly-notice').forEach(el => {
+        el.style.display = 'block';
+      });
+    }
+  } catch (e) {
+    // Fail silently
   }
 }
 

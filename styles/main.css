@@ -161,19 +161,19 @@ img {
 }
 
 .section {
-  padding: 6.5rem 0;
+  padding: 2.75rem 0;
   position: relative;
 }
 
 .section-header {
   text-align: center;
   max-width: 780px;
-  margin: 0 auto 3.5rem auto;
+  margin: 0 auto 2rem auto;
 }
 
 .section-header p {
-  margin-top: 1rem;
-  font-size: 1.15rem;
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
 }
 
 /* ==========================================================================
@@ -1530,13 +1530,21 @@ img {
   }
 
   .mobile-menu-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    flex-shrink: 0;
+    margin-left: 0.15rem;
+    border-radius: 8px;
   }
 
   .nav-actions {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.35rem;
   }
 
   .nav-actions .btn-open-lead-modal {
@@ -1545,13 +1553,90 @@ img {
 }
 
 @media (max-width: 768px) {
+  .navbar-container {
+    height: 62px;
+    padding: 0 0.85rem;
+    gap: 0.35rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.15rem;
+    gap: 0.45rem;
+  }
+
+  .navbar-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .lang-btn {
+    padding: 0.35rem 0.45rem;
+    font-size: 0.75rem;
+    gap: 0.2rem;
+  }
+
+  .lang-btn .globe-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .btn-navbar-cta {
+    padding: 0.42rem 0.65rem !important;
+    font-size: 0.78rem !important;
+    font-weight: 700;
+    gap: 0.3rem !important;
+    border-radius: 8px !important;
+    white-space: nowrap;
+    display: inline-flex !important;
+    align-items: center;
+  }
+
+  .btn-navbar-cta svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
   .hero-section {
-    padding: 7.5rem 0 3.5rem 0;
+    padding: 1.25rem 0 1.5rem 0 !important;
+  }
+
+  .section {
+    padding: 1.75rem 0 !important;
+  }
+
+  .section-header {
+    margin: 0 auto 1.35rem auto !important;
+  }
+
+  .section-header p {
+    margin-top: 0.5rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .section-header h2 {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
   }
 
   .form-row {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 520px) {
+  .btn-navbar-text-long {
+    display: none;
+  }
+  .btn-navbar-text-short {
+    display: inline;
+  }
+}
+
+@media (min-width: 521px) {
+  .btn-navbar-text-short {
+    display: none;
+  }
+}
 
   .comparison-table th,
   .comparison-table td {
@@ -1570,36 +1655,51 @@ img {
 }
 
 /* ==========================================================================
-   Campaign Top Bar
+   Campaign Top Bar (Card de Novidades Claro com Alto Contraste)
    ========================================================================== */
 .campaign-bar {
-  background: linear-gradient(90deg, #064e3b 0%, #0f766e 40%, #1e3a8a 100%);
-  color: #ffffff;
-  padding: 0.6rem 1rem;
-  font-size: 0.875rem;
+  background: #ecfdf5 !important;
+  border-bottom: 1px solid #a7f3d0 !important;
+  color: #064e3b !important;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
   text-align: center;
   position: relative;
-  z-index: 1001;
+  z-index: 990;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Centralização horizontal */
   gap: 0.75rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 4px rgba(16, 185, 129, 0.08);
+  margin-top: 80px; /* Compensa a navbar fixa superior no desktop */
 }
 
 .campaign-bar-text {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center; /* Centralização horizontal */
+  text-align: center;
+  gap: 0.65rem;
   flex-wrap: wrap;
-  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.campaign-bar-msg {
+  color: #1e293b !important; /* Fonte escura nítida sobre fundo claro */
+  font-weight: 500;
+}
+
+.campaign-bar-msg strong {
+  color: #064e3b !important; /* Verde escuro para termos destacados */
+  font-weight: 700;
 }
 
 .campaign-bar-badge {
-  background: #fef08a;
-  color: #854d0e;
-  font-size: 0.75rem;
+  background: #059669 !important;
+  color: #ffffff !important;
+  font-size: 0.72rem;
   font-weight: 800;
   padding: 0.15rem 0.6rem;
   border-radius: var(--radius-full);
@@ -1607,30 +1707,46 @@ img {
   letter-spacing: 0.04em;
 }
 
+.campaign-bar-btn {
+  background: #059669 !important;
+  color: #ffffff !important;
+  padding: 0.28rem 0.85rem !important;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
+}
+
+.campaign-bar-btn:hover {
+  background: #047857 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.35);
+}
+
 .campaign-bar-link {
-  color: #ffffff;
+  color: #047857 !important;
   text-decoration: underline;
   font-weight: 700;
   transition: opacity var(--transition-fast);
 }
 
 .campaign-bar-link:hover {
-  opacity: 0.9;
+  opacity: 0.85;
   text-decoration: none;
-}
-
-/* Adjust navbar when campaign bar is present */
-body.has-campaign-bar .navbar {
-  top: 38px;
 }
 
 @media (max-width: 768px) {
   .campaign-bar {
+    margin-top: 62px; /* Compensa a navbar fixa superior no mobile */
     font-size: 0.8rem;
-    padding: 0.5rem 0.75rem;
-  }
-  body.has-campaign-bar .navbar {
-    top: 50px;
+    padding: 0.55rem 0.75rem;
+    line-height: 1.4;
   }
 }
 
@@ -1917,6 +2033,117 @@ body.has-campaign-bar .navbar {
   gap: 0.4rem;
 }
 
+/* Hero High-Impact CTA Button */
+.hero-cta-group {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-cta-complete {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.15rem;
+  background: linear-gradient(135deg, #047857 0%, #059669 45%, #10b981 100%);
+  color: #ffffff;
+  padding: 1.1rem 1.65rem;
+  border-radius: var(--radius-lg, 16px);
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(5, 150, 105, 0.38), 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  max-width: 640px;
+}
+
+.btn-cta-complete::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.75s ease;
+}
+
+.btn-cta-complete:hover::before {
+  left: 100%;
+}
+
+.btn-cta-complete:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 16px 36px rgba(5, 150, 105, 0.5), 0 4px 12px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+  color: #ffffff;
+}
+
+.btn-cta-icon-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.65rem;
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-cta-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+}
+
+.btn-cta-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #d1fae5;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.btn-cta-headline {
+  font-family: var(--font-display, inherit);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #ffffff;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .btn-cta-complete {
+    padding: 0.95rem 1.15rem;
+    gap: 0.85rem;
+  }
+  .btn-cta-headline {
+    font-size: 0.95rem;
+  }
+  .btn-cta-icon-wrap svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+.hero-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.35rem;
+}
+
+.hero-pills-row .salao-pill-tag {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.75rem;
+}
+
 .salao-pill-tag {
   display: inline-flex;
   align-items: center;
@@ -1928,7 +2155,7 @@ body.has-campaign-bar .navbar {
   font-size: 0.85rem;
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Salon Benefits 4-grid */

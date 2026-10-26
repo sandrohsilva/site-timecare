@@ -52,7 +52,7 @@
     rel="stylesheet">
 
   <!-- Estilos CSS Principais -->
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main.css?v=2.3">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6NLGSJX"></script>
@@ -88,29 +88,7 @@
 
 <body class="has-campaign-bar">
 
-  <!-- Top Announcement Bar -->
-  <aside class="campaign-bar" aria-label="Novidades TimeCare Lite">
-    <div class="campaign-bar-text">
-      <span class="campaign-bar-badge" style="background: #10b981; color: #ffffff;">Nova Versão</span>
-      <span>Novidades: <strong>Catálogo de Produtos com Estoque</strong>, <strong>Compras Parceladas</strong> e
-        <strong>11 Nichos Prontos</strong>!</span>
-      <a href="https://play.google.com/store/apps/details?id=br.com.iatech.timecare_lite&pcampaignid=web_share"
-        target="_blank" rel="noopener noreferrer" class="campaign-bar-link track-playstore-download"
-        data-download-source="top_banner">
-        Baixar Grátis na Google Play &rarr;
-      </a>
-    </div>
-  </aside>
-
-  <!-- Ambient Glow Effects -->
-  <div class="ambient-glow glow-top-left" style="background: radial-gradient(circle, #d1fae5, transparent 70%);"
-    aria-hidden="true"></div>
-  <div class="ambient-glow glow-mid-right" style="background: radial-gradient(circle, #ccfbf1, transparent 70%);"
-    aria-hidden="true"></div>
-  <div class="ambient-glow glow-bottom-left" style="background: radial-gradient(circle, #dcfce7, transparent 70%);"
-    aria-hidden="true"></div>
-
-  <!-- Header & Navbar -->
+  <!-- Header & Navbar (Sempre Visível no Topo) -->
   <header class="navbar" id="navbar">
     <div class="container navbar-container">
       <a href="index.html" class="navbar-brand" title="TimeCare Lite - Página Inicial">
@@ -126,7 +104,6 @@
           <li><a href="#pdv-estoque" class="nav-link">Produtos & PDV</a></li>
           <li><a href="#financeiro" class="nav-link">Financeiro</a></li>
           <li><a href="#agenda-alarmes" class="nav-link">Agenda</a></li>
-          <li><a href="#galeria" class="nav-link">25 Telas</a></li>
           <li><a href="#precos" class="nav-link">Planos</a></li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
           <li><a href="clinica.html" class="nav-link" style="color: #2563eb; font-weight: 600;">Clínicas &rarr;</a></li>
@@ -185,18 +162,19 @@
         </div>
 
         <a href="https://play.google.com/store/apps/details?id=br.com.iatech.timecare_lite&pcampaignid=web_share"
-          target="_blank" rel="noopener noreferrer" class="btn btn-lite btn-sm track-playstore-download"
+          target="_blank" rel="noopener noreferrer" class="btn btn-lite btn-sm btn-navbar-cta track-playstore-download"
           data-download-source="navbar_cta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M3.609 1.814L13.792 12 3.61 22.186a1.986 1.986 0 0 1-.61-1.414V3.228c0-.53.21-1.04.609-1.414zM15.206 13.414l2.42 2.42-12.822 7.4c.594.34 1.34.27 1.866-.17l8.536-9.65zm0-2.828l-8.536-9.65A1.99 1.99 0 0 0 4.804.766l12.822 7.4-2.42 2.42zm2.122 1.414l3.52-2.03a1.997 1.997 0 0 0 0-3.46l-3.52-2.03-2.12 2.12 2.12 5.4z" />
           </svg>
-          Baixar Grátis
+          <span class="btn-navbar-text-long">Baixar Grátis</span>
+          <span class="btn-navbar-text-short">Instalar</span>
         </a>
       </div>
 
       <button class="mobile-menu-toggle" aria-label="Abrir Menu de Navegação" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
           stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -206,10 +184,31 @@
     </div>
   </header>
 
+  <!-- Top Announcement Bar (Card de Novidades com Alto Contraste) -->
+  <aside class="campaign-bar" aria-label="Novidades TimeCare Lite">
+    <div class="campaign-bar-text">
+      <span class="campaign-bar-badge">Nova Versão</span>
+      <span class="campaign-bar-msg">Novidades: <strong>Catálogo & Estoque</strong>, <strong>Compras Parceladas</strong> e <strong>11 Nichos Prontos</strong>!</span>
+      <a href="https://play.google.com/store/apps/details?id=br.com.iatech.timecare_lite&pcampaignid=web_share"
+        target="_blank" rel="noopener noreferrer" class="campaign-bar-btn track-playstore-download"
+        data-download-source="top_banner">
+        Instalar na Google Play &rarr;
+      </a>
+    </div>
+  </aside>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow glow-top-left" style="background: radial-gradient(circle, #d1fae5, transparent 70%);"
+    aria-hidden="true"></div>
+  <div class="ambient-glow glow-mid-right" style="background: radial-gradient(circle, #ccfbf1, transparent 70%);"
+    aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-left" style="background: radial-gradient(circle, #dcfce7, transparent 70%);"
+    aria-hidden="true"></div>
+
   <main id="inicio">
 
     <!-- Hero Section with Real Video Demonstration Mockup -->
-    <section class="hero-section" style="padding-top: 3.5rem; padding-bottom: 4rem;">
+    <section class="hero-section" style="padding-top: 1.25rem; padding-bottom: 1.5rem;">
       <div class="container">
         <div class="lite-hero-grid">
 
@@ -223,75 +222,46 @@
             </div>
 
             <h1 class="hero-title"
-              style="font-size: clamp(2.1rem, 4.2vw, 3.2rem); line-height: 1.15; margin-bottom: 1.25rem;">
-              A solução completa, inteligente e <span
-                style="background: var(--lite-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">sem
-                atrito</span> para autônomos.
+              style="font-size: clamp(1.85rem, 3.8vw, 3.1rem); line-height: 1.18; margin-bottom: 1rem;">
+              Sua Agenda, Vendas e Finanças para <span
+                style="background: var(--lite-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Salões, Barbearias, Clínicas, Estética e Autônomos</span>.
             </h1>
 
             <p class="hero-description"
-              style="font-size: 1.15rem; color: var(--text-secondary); max-width: 580px; margin-bottom: 1.75rem;">
-              Transforme a rotina do seu negócio: organize atendimentos por minuto, venda produtos com baixa de estoque,
-              parcele compras e tenha o fluxo de caixa sempre sob controle. <strong>Sem mensalidades</strong> e com
-              <strong>privacidade absoluta dos seus dados</strong>.
+              style="font-size: 1.05rem; color: var(--text-secondary); max-width: 600px; margin-bottom: 1.25rem; line-height: 1.6;">
+              O aplicativo definitivo para <strong>Cabeleireiros, Barbeiros, Manicures, Esteticistas, Clínicas, Terapeutas, Pet Shops e Autônomos</strong>: organize atendimentos por minuto, venda produtos com baixa automática de estoque no PDV, controle compras parceladas e tenha o fluxo de caixa sempre sob controle. <strong>100% offline (Local-First), sem mensalidades e com total privacidade dos seus dados.</strong>
             </p>
 
-            <!-- Pill Badges -->
-            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem;">
-              <span class="salao-pill-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                100% Offline (SQLite)
-              </span>
-              <span class="salao-pill-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                Controle de Estoque & PDV
-              </span>
-              <span class="salao-pill-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                Compras Parceladas
-              </span>
-              <span class="salao-pill-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                Alarmes Exatos no SO
-              </span>
-              <span class="salao-pill-tag">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                6 Idiomas
-              </span>
+            <!-- Segment Chips & Key Benefits -->
+            <div class="hero-pills-row">
+              <span class="salao-pill-tag">✂️ Salões & Barbearias</span>
+              <span class="salao-pill-tag">💅 Manicures & Estética</span>
+              <span class="salao-pill-tag">🩺 Clínicas & Terapeutas</span>
+              <span class="salao-pill-tag">🐾 Pet Shops & Autônomos</span>
+              <span class="salao-pill-tag" style="background: #ecfdf5; color: #047857; border-color: #a7f3d0;">✓ 100% Offline (SQLite)</span>
+              <span class="salao-pill-tag" style="background: #ecfdf5; color: #047857; border-color: #a7f3d0;">✓ PDV & Estoque</span>
             </div>
 
-            <!-- Big CTAs -->
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <!-- Big Hero CTA -->
+            <div class="hero-cta-group">
               <a href="https://play.google.com/store/apps/details?id=br.com.iatech.timecare_lite&pcampaignid=web_share"
-                target="_blank" rel="noopener noreferrer" class="btn-playstore-large track-playstore-download"
+                target="_blank" rel="noopener noreferrer" class="btn-cta-complete track-playstore-download"
                 data-download-source="hero_cta">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M3.609 1.814L13.792 12 3.61 22.186a1.986 1.986 0 0 1-.61-1.414V3.228c0-.53.21-1.04.609-1.414z"
-                    fill="#00e5ff" />
-                  <path d="M15.206 13.414l2.42 2.42-12.822 7.4c.594.34 1.34.27 1.866-.17l8.536-9.65z" fill="#ff3d00" />
-                  <path d="M15.206 10.586l-8.536-9.65A1.99 1.99 0 0 0 4.804.766l12.822 7.4-2.42 2.42z" fill="#4caf50" />
-                  <path d="M17.328 12l3.52-2.03a1.997 1.997 0 0 0 0-3.46l-3.52-2.03-2.12 2.12 2.12 5.4z"
-                    fill="#ffeb3b" />
-                </svg>
-                <div class="btn-playstore-text">
-                  <small>Disponível na</small>
-                  <strong>Google Play</strong>
+                <div class="btn-cta-icon-wrap">
+                  <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3.609 1.814L13.792 12 3.61 22.186a1.986 1.986 0 0 1-.61-1.414V3.228c0-.53.21-1.04.609-1.414z"
+                      fill="#00e5ff" />
+                    <path d="M15.206 13.414l2.42 2.42-12.822 7.4c.594.34 1.34.27 1.866-.17l8.536-9.65z" fill="#ff3d00" />
+                    <path d="M15.206 10.586l-8.536-9.65A1.99 1.99 0 0 0 4.804.766l12.822 7.4-2.42 2.42z" fill="#4caf50" />
+                    <path d="M17.328 12l3.52-2.03a1.997 1.997 0 0 0 0-3.46l-3.52-2.03-2.12 2.12 2.12 5.4z"
+                      fill="#ffeb3b" />
+                  </svg>
                 </div>
-              </a>
-
-              <a href="#galeria" class="btn btn-secondary btn-md">
-                Ver Todas as 25 Telas &darr;
+                <div class="btn-cta-text-wrap">
+                  <div class="btn-cta-badge">Disponível Grátis na Google Play</div>
+                  <strong class="btn-cta-headline">Instale Agora Sua Agenda com Vendas de Produtos, Serviços, Financeiro e muito mais &rarr;</strong>
+                </div>
               </a>
             </div>
 
@@ -348,7 +318,7 @@
     </section>
 
     <!-- Strategic Pillars Section (Diferenciais Competitivos) -->
-    <section class="section" id="diferenciais" style="background: #ffffff; padding: 4.5rem 0;">
+    <section class="section" id="diferenciais" style="background: #ffffff; padding: 2.25rem 0;">
       <div class="container">
         <div class="section-header scroll-reveal">
           <span class="badge badge-lite">Engenharia de Alto Desempenho</span>
@@ -460,7 +430,7 @@
     </section>
 
     <!-- 11 Niches Section -->
-    <section class="section" id="segmentos" style="background: var(--bg-primary); padding: 4.5rem 0;">
+    <section class="section" id="segmentos" style="background: var(--bg-primary); padding: 2.25rem 0;">
       <div class="container">
         <div class="section-header scroll-reveal">
           <span class="badge badge-lite">Feito Sob Medida</span>
@@ -649,7 +619,7 @@
     </section>
 
     <!-- Deep-Dive 1: Catálogo de Produtos, Estoque e PDV Integrado -->
-    <section class="section" id="pdv-estoque" style="background: #ffffff; padding: 4.5rem 0;">
+    <section class="section" id="pdv-estoque" style="background: #ffffff; padding: 2.25rem 0;">
       <div class="container">
 
         <div class="feature-dive-grid scroll-reveal">
@@ -718,7 +688,7 @@
     </section>
 
     <!-- Deep-Dive 2: Compras Parceladas e Gestão Financeira -->
-    <section class="section" id="financeiro" style="background: var(--bg-primary); padding: 4.5rem 0;">
+    <section class="section" id="financeiro" style="background: var(--bg-primary); padding: 2.25rem 0;">
       <div class="container">
 
         <div class="feature-dive-grid reverse scroll-reveal">
@@ -788,7 +758,7 @@
     </section>
 
     <!-- Deep-Dive 3: Alarmes Exatos e Notificações de Alta Precisão -->
-    <section class="section" id="agenda-alarmes" style="background: #ffffff; padding: 4.5rem 0;">
+    <section class="section" id="agenda-alarmes" style="background: #ffffff; padding: 2.25rem 0;">
       <div class="container">
 
         <div class="feature-dive-grid scroll-reveal">
@@ -857,7 +827,7 @@
     </section>
 
     <!-- Deep-Dive 4: CRM de Clientes, Quarentena e Cartão Digital -->
-    <section class="section" style="background: var(--bg-primary); padding: 4.5rem 0;">
+    <section class="section" style="background: var(--bg-primary); padding: 2.25rem 0;">
       <div class="container">
 
         <div class="feature-dive-grid reverse scroll-reveal">
@@ -925,382 +895,48 @@
       </div>
     </section>
 
-    <!-- Complete 25-Screen Gallery Section with Lightbox & Filters -->
-    <section class="section" id="galeria" style="background: #ffffff; padding: 5rem 0;">
-      <div class="container">
-        <div class="section-header scroll-reveal">
-          <span class="badge badge-lite">Transparência Total &bull; Telas Reais</span>
-          <h2>Explore Todas as 25 Telas do Aplicativo</h2>
-          <p>
-            Sem ilustrações conceituais ou maquetes de mentira: estas são as capturas reais da versão que você instala
-            agora no seu smartphone Android. Clique em qualquer tela para ampliar!
+    <!-- High-Impact Conversion CTA Section (Instale Agora) -->
+    <section class="section" style="background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%); color: #ffffff; padding: 2.25rem 0; position: relative; overflow: hidden;">
+      <div style="position: absolute; top: -50%; right: -20%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, transparent 70%); pointer-events: none;"></div>
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="scroll-reveal" style="max-width: 860px; margin: 0 auto; text-align: center;">
+          <span class="badge" style="background: rgba(255,255,255,0.2); color: #ffffff; border: 1px solid rgba(255,255,255,0.3); margin-bottom: 1.25rem;">
+            Tudo em um Único Aplicativo
+          </span>
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: #ffffff; line-height: 1.2; margin-bottom: 1.25rem;">
+            Instale Agora Sua Agenda com Vendas de Produtos, Serviços, Financeiro e muito mais
+          </h2>
+          <p style="font-size: 1.15rem; color: #d1fae5; margin-bottom: 2.25rem; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            Sem mensalidades, sem travas de internet e com controle total do seu negócio. Comece hoje mesmo a transformar seu atendimento em faturamento organizado.
           </p>
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="gallery-filters scroll-reveal"
-          style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 2.5rem;">
-          <button type="button" class="filter-btn active" data-filter="all">Todas as Telas (25)</button>
-          <button type="button" class="filter-btn" data-filter="dashboard">Dashboard & Início</button>
-          <button type="button" class="filter-btn" data-filter="agenda">Agenda & Atendimentos</button>
-          <button type="button" class="filter-btn" data-filter="financeiro">Financeiro & Caixa</button>
-          <button type="button" class="filter-btn" data-filter="produtos">Produtos & PDV</button>
-          <button type="button" class="filter-btn" data-filter="config">Configurações & Backup</button>
-        </div>
-
-        <!-- 25 Gallery Items Grid -->
-        <div class="gallery-grid-full scroll-reveal">
-
-          <!-- 1. Dashboard Principal -->
-          <div class="gallery-item" data-category="dashboard" data-fullsrc="timecare_lite_novas/1. Dashboard.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/1. Dashboard.webp" alt="Dashboard Principal TimeCare Lite" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Dashboard</div>
-              <div class="gallery-item-title">Dashboard Principal & Saldo em Caixa</div>
-            </div>
+          <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://play.google.com/store/apps/details?id=br.com.iatech.timecare_lite&pcampaignid=web_share"
+              target="_blank" rel="noopener noreferrer" class="btn-playstore-large track-playstore-download"
+              data-download-source="mid_section_cta" style="background: #ffffff; color: #0f172a; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a1.986 1.986 0 0 1-.61-1.414V3.228c0-.53.21-1.04.609-1.414z" fill="#00e5ff" />
+                <path d="M15.206 13.414l2.42 2.42-12.822 7.4c.594.34 1.34.27 1.866-.17l8.536-9.65z" fill="#ff3d00" />
+                <path d="M15.206 10.586l-8.536-9.65A1.99 1.99 0 0 0 4.804.766l12.822 7.4-2.42 2.42z" fill="#4caf50" />
+                <path d="M17.328 12l3.52-2.03a1.997 1.997 0 0 0 0-3.46l-3.52-2.03-2.12 2.12 2.12 5.4z" fill="#ffeb3b" />
+              </svg>
+              <div class="btn-playstore-text">
+                <small style="color: #64748b;">Baixar Gratuitamente na</small>
+                <strong style="color: #0f172a;">Google Play Store</strong>
+              </div>
+            </a>
           </div>
-
-          <!-- 2. Agenda com Slots -->
-          <div class="gallery-item" data-category="agenda" data-fullsrc="timecare_lite_novas/2. Agenda.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/2. Agenda.webp" alt="Grade Horária da Agenda" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Agenda</div>
-              <div class="gallery-item-title">Grade Horária com Slots por Minuto</div>
-            </div>
+          <div style="margin-top: 1.75rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.95rem; color: #a7f3d0;">
+            <span>✓ 100% Gratuito</span>
+            <span>✓ Sem Cadastro Obrigatório</span>
+            <span>✓ Funciona 100% Offline</span>
+            <span>✓ Backup no Google Drive</span>
           </div>
-
-          <!-- 3. Dashboard com Resumos -->
-          <div class="gallery-item" data-category="dashboard"
-            data-fullsrc="timecare_lite_novas/dashboard com resumos.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/dashboard com resumos.webp" alt="Dashboard com Resumos Analíticos"
-                loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Dashboard</div>
-              <div class="gallery-item-title">Resumos Analíticos e Alertas Diários</div>
-            </div>
-          </div>
-
-          <!-- 4. Home com saldo e compromissos -->
-          <div class="gallery-item" data-category="dashboard"
-            data-fullsrc="timecare_lite_novas/home dashboard com saldo em caixa e compromissos agendados.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/home dashboard com saldo em caixa e compromissos agendados.webp"
-                alt="Home com saldo e compromissos" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Dashboard</div>
-              <div class="gallery-item-title">Saldo em Caixa e Próximos Atendimentos</div>
-            </div>
-          </div>
-
-          <!-- 5. Splash Screen -->
-          <div class="gallery-item" data-category="dashboard"
-            data-fullsrc="timecare_lite_novas/splash screen com logo.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/splash screen com logo.webp" alt="Splash Screen Oficial" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Início</div>
-              <div class="gallery-item-title">Splash Screen com Carregamento Instantâneo</div>
-            </div>
-          </div>
-
-          <!-- 6. Totais Financeiros e Gráficos -->
-          <div class="gallery-item" data-category="financeiro"
-            data-fullsrc="timecare_lite_novas/teala financeiro totais e graficos.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/teala financeiro totais e graficos.webp" alt="Totais Financeiros e Gráficos"
-                loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Financeiro</div>
-              <div class="gallery-item-title">Totais Financeiros e Balanço Mensal</div>
-            </div>
-          </div>
-
-          <!-- 7. Gráfico Rosca / Bolacha -->
-          <div class="gallery-item" data-category="financeiro"
-            data-fullsrc="timecare_lite_novas/tela financeira com grafico de receitas e despesas recorrentes estilo bolacha dividido por gastos.webp">
-            <div class="gallery-thumb-wrap">
-              <img
-                src="timecare_lite_novas/tela financeira com grafico de receitas e despesas recorrentes estilo bolacha dividido por gastos.webp"
-                alt="Gráfico de Gastos Estilo Rosca" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Financeiro</div>
-              <div class="gallery-item-title">Gráficos de Rosca por Categorias de Gasto</div>
-            </div>
-          </div>
-
-          <!-- 8. Lançamentos Financeiros -->
-          <div class="gallery-item" data-category="financeiro"
-            data-fullsrc="timecare_lite_novas/tela financeiro graficos e lançamentos.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela financeiro graficos e lançamentos.webp" alt="Lançamentos Financeiros"
-                loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Financeiro</div>
-              <div class="gallery-item-title">Histórico Detalhado de Lançamentos</div>
-            </div>
-          </div>
-
-          <!-- 9. Lembrete de Contas a Pagar -->
-          <div class="gallery-item" data-category="financeiro"
-            data-fullsrc="timecare_lite_novas/tela lembrete de contas a pagar com duas contas exibidas.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela lembrete de contas a pagar com duas contas exibidas.webp"
-                alt="Contas a Pagar" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Financeiro</div>
-              <div class="gallery-item-title">Central de Contas a Pagar e Vencimentos</div>
-            </div>
-          </div>
-
-          <!-- 10. Tabela de Serviços -->
-          <div class="gallery-item" data-category="produtos"
-            data-fullsrc="timecare_lite_novas/tela com tabela de serviços.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela com tabela de serviços.webp" alt="Tabela de Serviços" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Serviços</div>
-              <div class="gallery-item-title">Catálogo de Serviços com Duração e Preço</div>
-            </div>
-          </div>
-
-          <!-- 11. Produtos e Estoque -->
-          <div class="gallery-item" data-category="produtos"
-            data-fullsrc="timecare_lite_novas/tela da tabela de serviços na aba produtos com lista preços.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela da tabela de serviços na aba produtos com lista preços.webp"
-                alt="Aba de Produtos e Preços" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Produtos & Estoque</div>
-              <div class="gallery-item-title">Catálogo de Produtos com Saldo em Estoque</div>
-            </div>
-          </div>
-
-          <!-- 12. Checkout e Finalização -->
-          <div class="gallery-item" data-category="produtos"
-            data-fullsrc="timecare_lite_novas/tela de finalizacao do atendimento lançamento de serviço e pagamento.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela de finalizacao do atendimento lançamento de serviço e pagamento.webp"
-                alt="Finalização de Atendimento" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">PDV & Atendimento</div>
-              <div class="gallery-item-title">Comanda de Atendimento e Formas de Pagamento</div>
-            </div>
-          </div>
-
-          <!-- 13. Venda Avulsa Balcão -->
-          <div class="gallery-item" data-category="produtos"
-            data-fullsrc="timecare_lite_novas/tela de lançamento de venda avulsa.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela de lançamento de venda avulsa.webp" alt="Venda Avulsa Direta"
-                loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">PDV Ágil</div>
-              <div class="gallery-item-title">Lançamento de Venda Rápida de Balcão</div>
-            </div>
-          </div>
-
-          <!-- 14. Menu Ações da Agenda -->
-          <div class="gallery-item" data-category="agenda"
-            data-fullsrc="timecare_lite_novas/tela com a barra de menu que abre ao tocar no botão mais da agenda com opcoes de acões.webp">
-            <div class="gallery-thumb-wrap">
-              <img
-                src="timecare_lite_novas/tela com a barra de menu que abre ao tocar no botão mais da agenda com opcoes de acões.webp"
-                alt="Menu Rápido da Agenda" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Agenda</div>
-              <div class="gallery-item-title">Menu Rápido de Ações (+ Agendar, Vender, Bloquear)</div>
-            </div>
-          </div>
-
-          <!-- 15. Agenda com Lembrete de Conta -->
-          <div class="gallery-item" data-category="agenda"
-            data-fullsrc="timecare_lite_novas/tela da agenda com um agendamento e um lembrete de conta a pagar.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela da agenda com um agendamento e um lembrete de conta a pagar.webp"
-                alt="Agenda com Lembrete Integrado" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Agenda</div>
-              <div class="gallery-item-title">Alerta Visual de Contas na Grade da Agenda</div>
-            </div>
-          </div>
-
-          <!-- 16. Agenda com Múltiplos Agendamentos & Toast -->
-          <div class="gallery-item" data-category="agenda"
-            data-fullsrc="timecare_lite_novas/tela da agenda com varios agendamentos e um toast de venda finalizada e agendada para receber.webp">
-            <div class="gallery-thumb-wrap">
-              <img
-                src="timecare_lite_novas/tela da agenda com varios agendamentos e um toast de venda finalizada e agendada para receber.webp"
-                alt="Agenda Cheia e Notificação de Venda" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Agenda</div>
-              <div class="gallery-item-title">Grade Completa e Notificação de Venda Concluída</div>
-            </div>
-          </div>
-
-          <!-- 17. Agenda sem Agendamentos -->
-          <div class="gallery-item" data-category="agenda"
-            data-fullsrc="timecare_lite_novas/tela da agenda sem agendamentos.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela da agenda sem agendamentos.webp" alt="Agenda Vazia" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Agenda</div>
-              <div class="gallery-item-title">Visão Limpa da Grade Horária</div>
-            </div>
-          </div>
-
-          <!-- 18. Configuração de Slots e Janela de Atenção -->
-          <div class="gallery-item" data-category="config"
-            data-fullsrc="timecare_lite_novas/tela confgiruacao agenda lembres duracao dos slots e janela de atencao.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela confgiruacao agenda lembres duracao dos slots e janela de atencao.webp"
-                alt="Configuração de Slots" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Configurações</div>
-              <div class="gallery-item-title">Duração de Slots e Janela de Atenção</div>
-            </div>
-          </div>
-
-          <!-- 19. Configurações da Agenda -->
-          <div class="gallery-item" data-category="config"
-            data-fullsrc="timecare_lite_novas/configurações da agenda.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/configurações da agenda.webp" alt="Opções da Agenda" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Configurações</div>
-              <div class="gallery-item-title">Ajuste de Horários de Início e Término</div>
-            </div>
-          </div>
-
-          <!-- 20. Conexões e Clientes -->
-          <div class="gallery-item" data-category="agenda"
-            data-fullsrc="timecare_lite_novas/tela de conexoes com um contato.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela de conexoes com um contato.webp" alt="Conexões de Clientes"
-                loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">CRM</div>
-              <div class="gallery-item-title">Conexões, Clientes e Relacionamento WhatsApp</div>
-            </div>
-          </div>
-
-          <!-- 21. Backup e Google Drive -->
-          <div class="gallery-item" data-category="config"
-            data-fullsrc="timecare_lite_novas/tela de backup no google drive e sincronizacao com google calendar.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela de backup no google drive e sincronizacao com google calendar.webp"
-                alt="Backup e Sincronização" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Backup</div>
-              <div class="gallery-item-title">Cópia de Segurança no Drive e Google Calendar</div>
-            </div>
-          </div>
-
-          <!-- 22. Login com Senha -->
-          <div class="gallery-item" data-category="config"
-            data-fullsrc="timecare_lite_novas/tela de login com senha.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela de login com senha.webp" alt="Login e Proteção" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Segurança</div>
-              <div class="gallery-item-title">Proteção por Senha Local e Biometria</div>
-            </div>
-          </div>
-
-          <!-- 23. Lista de Configurações -->
-          <div class="gallery-item" data-category="config"
-            data-fullsrc="timecare_lite_novas/tela com lista de configuracoes.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela com lista de configuracoes.webp" alt="Painel Geral de Configurações"
-                loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Configurações</div>
-              <div class="gallery-item-title">Central Geral de Preferências e Parâmetros</div>
-            </div>
-          </div>
-
-          <!-- 24. Setup Profissional -->
-          <div class="gallery-item" data-category="config"
-            data-fullsrc="timecare_lite_novas/tela setup profissional .webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela setup profissional .webp" alt="Setup Profissional Inicial"
-                loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Setup</div>
-              <div class="gallery-item-title">Seleção de Nicho Profissional e Perfil</div>
-            </div>
-          </div>
-
-          <!-- 25. Apresentação Institucional -->
-          <div class="gallery-item" data-category="dashboard"
-            data-fullsrc="timecare_lite_novas/tela com nome do app e um celular com imagem não real do app.webp">
-            <div class="gallery-thumb-wrap">
-              <img src="timecare_lite_novas/tela com nome do app e um celular com imagem não real do app.webp"
-                alt="Tela Institucional TimeCare" loading="lazy">
-              <div class="gallery-item-overlay"><span class="btn btn-secondary btn-sm">Ampliar Tela</span></div>
-            </div>
-            <div class="gallery-item-info">
-              <div class="gallery-item-tag">Institucional</div>
-              <div class="gallery-item-title">Sobre a Plataforma TimeCare Lite</div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
     <!-- Pricing / Model Section -->
-    <section class="section" id="precos" style="background: var(--bg-primary); padding: 5rem 0;">
+    <section class="section" id="precos" style="background: var(--bg-primary); padding: 2.25rem 0;">
       <div class="container">
         <div class="section-header scroll-reveal">
           <span class="badge badge-lite">Sem Surpresas</span>
@@ -1425,7 +1061,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="section" id="faq" style="background: #ffffff; padding: 5rem 0;">
+    <section class="section" id="faq" style="background: #ffffff; padding: 2.25rem 0;">
       <div class="container">
         <div class="section-header scroll-reveal">
           <span class="badge badge-lite">Tire Suas Dúvidas</span>
@@ -1543,7 +1179,7 @@
     </section>
 
     <!-- Final High-Converting Download CTA Box -->
-    <section class="section" style="padding-top: 1rem; padding-bottom: 5rem;">
+    <section class="section" style="padding-top: 1rem; padding-bottom: 2.25rem;">
       <div class="container">
         <div class="salon-highlight-box scroll-reveal">
           <span class="badge"
@@ -1601,7 +1237,6 @@
           <li><a href="clinica.html" style="color: #cbd5e1; text-decoration: none;">TimeCare Pro para Clínicas
               (SaaS)</a></li>
           <li><a href="#diferenciais" style="color: #cbd5e1; text-decoration: none;">Diferenciais Estratégicos</a></li>
-          <li><a href="#galeria" style="color: #cbd5e1; text-decoration: none;">Galeria de Telas Reais</a></li>
           <li><a href="#faq" style="color: #cbd5e1; text-decoration: none;">Dúvidas Frequentes</a></li>
         </ul>
       </div>
